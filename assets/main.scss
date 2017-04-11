@@ -1,0 +1,96 @@
+---
+---
+
+$barHeight: 50px;
+$barColor: #272727;
+$barColorHover: #474747;
+$barFontColor: #FFFFFF;
+
+/* 1. HEADER */
+
+body {
+  margin: 0;
+}
+
+
+#canvasHeader {
+  width:100%; 
+  height: 100%; 
+  margin:0px; 
+  border:0px; 
+  padding:0px;
+  display: block;
+  overflow: hidden;
+  }
+
+
+.nav-fixed {
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+#nav {
+    width: 100%;
+    height: $barHeight;
+    background-color: $barColor;
+    //position: fixed;
+    left: 0px;
+    overflow: hidden;
+    border-radius: 0px;
+    margin: 0px;
+    display: block;
+
+}
+
+.footer {
+    width: 100%;
+    height: $barHeight;
+    background-color: $barColor;
+    color: $barFontColor;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float:left;
+    width:100%;
+    overflow: hidden;
+}
+
+
+li {
+    float: left;
+    width:33.33%;
+    //min-width: 243px;
+    overflow: hidden;
+
+}
+
+a:link, a:visited {
+    color: $barFontColor;
+    //display:inline-block;
+    display: block;
+    //height: 68px;
+    //min-width: 243px;
+    font-size: 12px;
+    
+    padding-top: 19px;
+    padding-bottom: 19px;
+    
+    border-right: 1px solid #000000;
+    //border-top: 1px solid #000000;
+    background-color: $barColor;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Raleway', Arial;
+    letter-spacing: 2pt;
+    //line-height: 100%;
+    //overflow: hidden;
+}
+
+a:hover, a:active {
+    background-color: $barColorHover;
+}
