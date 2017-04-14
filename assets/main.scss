@@ -12,6 +12,18 @@ body {
   margin: 0;
 }
 
+#middle-outer{
+  width: 100%;
+  text-align: center;
+}
+
+#middle-inner{
+  display: inline-block;
+  width:100%;
+  max-width: 768px;
+  text-align: justify;
+}
+
 
 #canvasHeader {
   width:100%; 
@@ -46,12 +58,18 @@ body {
 
 .footer {
     width: 100%;
-    height: $barHeight;
+    //height: 75px;
     background-color: $barColor;
     color: $barFontColor;
+    
+    left: 0px;
+    //overflow: hidden;
+    border-radius: 0px;
+    margin: 0px;
+    display: block;
 }
 
-ul {
+#nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -61,7 +79,7 @@ ul {
 }
 
 
-li {
+#nav li {
     float: left;
     width:33.33%;
     //min-width: 243px;
@@ -69,7 +87,7 @@ li {
 
 }
 
-a:link, a:visited {
+#nav a:link, #nav a:visited {
     color: $barFontColor;
     //display:inline-block;
     display: block;
@@ -91,6 +109,27 @@ a:link, a:visited {
     //overflow: hidden;
 }
 
-a:hover, a:active {
+#nav a:hover, #nav a:active {
     background-color: $barColorHover;
 }
+
+//http://david.elbe.me/jekyll/2015/06/20/how-to-link-to-next-and-previous-post-with-jekyll.html
+.PageNavigation {
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+}
+
+.PageNavigation .next {
+  text-align: right;
+}
+
+

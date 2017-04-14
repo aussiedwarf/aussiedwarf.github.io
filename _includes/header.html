@@ -9,8 +9,7 @@ $(document).ready(function() {
   
   c.width = window.innerWidth;
   c.height = window.innerHeight - barHeight;
-  console.log("Height: " + window.innerHeight);
-  
+
   window.onresize = function(event) {
     c.width = window.innerWidth;
     c.height = window.innerHeight - barHeight;
@@ -31,11 +30,9 @@ $(document).ready(function() {
       console.log($(window).scrollTop())
     if ($(window).scrollTop() >= window.innerHeight-70) {
       $('#nav').addClass('nav-fixed');
-      console.log("GREATER");
     }
     if ($(window).scrollTop() < window.innerHeight-70) {
       $('#nav').removeClass('nav-fixed');
-      console.log("LESS");
     }
   });
 });
@@ -44,10 +41,9 @@ $(document).ready(function() {
 <div id="nav">
     
     <ul>
-      <li><a href="/">{{site.author}}</a></li>
+      <li><a href="/">{{site.title}}</a></li>
       <li><a href="/">About</a></li>
       <li><a href="/">Contact</a></li>
     </ul>
 
 </div>
-

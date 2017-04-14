@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body> 
+      {% include header.html %}
+      <div id="middle-outer">
+        <div id="middle-inner">
+      
+          {{ content }}
+        
+          <div class="blog-index">  
+            {% assign post = site.posts.first %}
+            {% assign contentPost = post.content %}
+            {% include post_detail.html %}
+          </div>
+      
+          {% assign numPosts = site.posts | size | minus:2 %}
+          {% assign prev = site.posts[numPosts] %}
+          <div class="PageNavigation">
+          <a class="prev" href="{{prev.url}}">&laquo; Prev {{prev.title}}</a>
+          </div>
+      
+        </div>
+      </div>
+      {% include footer.html %}
+  </body>
