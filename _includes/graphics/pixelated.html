@@ -28,9 +28,11 @@
         vec2 div = floor(pos/16.0);
         float mul = min(modulus.x * modulus.y, 1.0);
         
-        float startTime = floor(u_time/1000.0);
-        float stopTime = floor((u_time+1000.0)/1000.0);
-        float time = u_time/1000.0;
+        float ti = u_time + rand(div)*1000.0;
+        
+        float startTime = floor(ti/1000.0);
+        float stopTime = floor((ti+1000.0)/1000.0);
+        float time = ti/1000.0;
         float percent = floor((time - startTime)*10.0)/10.0;
         
         float start = rand(div + mod(vec2(startTime,startTime) * u_size, 12345.0) );
