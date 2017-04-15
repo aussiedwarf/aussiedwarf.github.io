@@ -1,0 +1,185 @@
+<script id="vertexShader" type="x-shader/x-vertex">
+
+      attribute vec2 a_pos;
+      
+      void main() {
+        mat4 mvp = mat4(1.0);
+        gl_Position = mvp * vec4(a_pos, 0.0, 1.0);
+
+      }
+    </script>
+    <!-- fragment shader -->
+    <script id="fragShader" type="x-shader/x-fragment">
+      precision mediump float;
+
+      uniform vec2 u_size;//half size
+      uniform vec3 u_color;
+      uniform float u_time;
+
+      void main() {
+        vec2 pos = gl_FragCoord.xy;
+        
+        vec2 modulus = floor(mod(pos * 0.5, 8.0));
+        float mul = min(modulus.x * modulus.y, 1.0);
+        
+        vec3 color = u_color * u_time;
+        
+        gl_FragColor = vec4(color*(mul),1.0);
+
+      }
+    </script>
+
+<script>
+$(document).ready(function() {
+  var canvas = document.getElementById("canvasHeader");
+  var gl = canvas.getContext("webgl");
+  var renderInfo = null;
+  
+  InitShaders();
+  
+
+  gl.viewport(0, 0, canvas.width, canvas.height);
+  
+  gl.clearColor(0.0, 0.0, 0.0, 1.0);
+
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  
+  requestAnimationFrame(Render);
+  var requestRender = true;
+
+  function Render()
+  {
+    var time = 1.0;
+    
+
+    gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    
+    gl.useProgram(renderInfo.program);
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, renderInfo.verts);
+    gl.vertexAttribPointer(renderInfo.a_pos, 2, gl.FLOAT, false, 0, 0);
+    gl.enableVertexAttribArray(renderInfo.a_pos);
+  
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, renderInfo.indicies);
+  
+    gl.uniform1f(renderInfo.u_time, time);
+    gl.uniform2f(renderInfo.u_size, canvas.width * 0.5, canvas.height * 0.5);
+    gl.uniform3f(renderInfo.u_color, 1.0,1.0,1.0);
+  
+  
+    gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0);
+    
+
+    requestAnimationFrame(Render);
+
+  }
+  
+  
+
+  function CompileShader(shaderSource, shaderType) 
+  {
+    // Create the shader object
+    var shader = gl.createShader(shaderType);
+ 
+    // Set the shader source code.
+    gl.shaderSource(shader, shaderSource);
+ 
+    // Compile the shader
+    gl.compileShader(shader);
+ 
+    // Check if it compiled
+    var success = gl.getShaderParameter(shader, gl.COMPILE_STATUS);
+    if (!success) 
+    {
+      // Something went wrong during compilation; get the error
+      var msg = gl.getShaderInfoLog(shader);
+      throw "could not compile shader:" + msg;
+    }
+ 
+    return shader;
+  }
+
+
+  function CreateProgram(vertexShader, fragmentShader) 
+  {
+    // create a program.
+    var program = gl.createProgram();
+ 
+    // attach the shaders.
+    gl.attachShader(program, vertexShader);
+    gl.attachShader(program, fragmentShader);
+ 
+    // link the program.
+    gl.linkProgram(program);
+ 
+    // Check if it linked.
+    var success = gl.getProgramParameter(program, gl.LINK_STATUS);
+    if (!success) {
+        // something went wrong with the link
+        throw ("program filed to link:" + gl.getProgramInfoLog (program));
+    }
+ 
+    return program;
+  };
+
+
+  function CreateShaderFromScript(scriptId, opt_shaderType) 
+  {
+    // look up the script tag by id.
+    var shaderScript = document.getElementById(scriptId);
+    if (!shaderScript) {
+      throw("*** Error: unknown script element " + scriptId);
+    }
+ 
+    // extract the contents of the script tag.
+    var shaderSource = shaderScript.text;
+ 
+    // If we didn't pass in a type, use the 'type' from
+    // the script tag.
+    if (!opt_shaderType) {
+      if (shaderScript.type == "x-shader/x-vertex") {
+        opt_shaderType = gl.VERTEX_SHADER;
+      } else if (shaderScript.type == "x-shader/x-fragment") {
+        opt_shaderType = gl.FRAGMENT_SHADER;
+      } else if (!opt_shaderType) {
+        throw("*** Error: shader type not set");
+      }
+    }
+ 
+    return CompileShader(shaderSource, opt_shaderType);
+  };
+  
+  function InitShaders()
+  {
+    var dataVerts = new Float32Array([-1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0]);
+    var dataIndicies = new Int16Array([0,1,3,2,3,1]);
+    
+    var verts = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, verts);
+    gl.bufferData(gl.ARRAY_BUFFER, dataVerts, gl.STATIC_DRAW);
+    
+    var indicies = gl.createBuffer();
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indicies);
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, dataIndicies, gl.STATIC_DRAW);
+    
+    var vertShader = CreateShaderFromScript("vertexShader");
+    var fragShader = CreateShaderFromScript("fragShader");
+    var progShader = CreateProgram(vertShader, fragShader);
+    
+    renderInfo = {
+      verts:          verts,
+      indicies:       indicies,
+      program:        progShader, 
+      a_pos:          gl.getAttribLocation(progShader, "a_pos"),
+      u_color:        gl.getUniformLocation(progShader, "u_color"), 
+      u_size:         gl.getUniformLocation(progShader, "u_size"),
+      u_time:         gl.getUniformLocation(progShader, "u_time")
+    };
+  
+  }
+
+});
+</script>

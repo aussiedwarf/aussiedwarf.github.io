@@ -5,38 +5,27 @@
 $(document).ready(function() {
   var barHeight = 50;
   var c=document.getElementById("canvasHeader");
-  var ctx=c.getContext("2d");
-  
+
   c.width = window.innerWidth;
   c.height = window.innerHeight - barHeight;
 
   window.onresize = function(event) {
     c.width = window.innerWidth;
     c.height = window.innerHeight - barHeight;
-    
-    ctx.fillStyle="#7f7f7f";
-    ctx.fillRect(0,0,c.width,c.height);
   };
   
-  
-  ctx.fillStyle="#7f7f7f";
-  ctx.fillRect(0,0,c.width,c.height);
-
-  
   $(window).scroll(function () {
-      //if you hard code, then use console
-      //.log to determine when you want the 
-      //nav bar to stick.  
-      console.log($(window).scrollTop())
-    if ($(window).scrollTop() >= window.innerHeight-70) {
+    if ($(window).scrollTop() >= window.innerHeight - barHeight) {
       $('#nav').addClass('nav-fixed');
     }
-    if ($(window).scrollTop() < window.innerHeight-70) {
+    if ($(window).scrollTop() < window.innerHeight - barHeight) {
       $('#nav').removeClass('nav-fixed');
     }
   });
 });
 </script>
+
+{% include graphics/pixelated.html %}
 
 <div id="nav">
     
