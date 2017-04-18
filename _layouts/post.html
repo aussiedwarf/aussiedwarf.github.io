@@ -7,7 +7,12 @@
 
       <div id="middle-outer">
         <div id="middle-inner">
-    
+          <h1 class="entry-title">
+            <a href="{{ root_url }}{{ post.url }}">{{ page.title }}</a>
+          </h1>  
+        
+          Posted on <time>{{ page.date | date: "%b %-d, %Y" }}</time>
+          
           {{ content }}
       
           {% include pagenavigation.html %}
