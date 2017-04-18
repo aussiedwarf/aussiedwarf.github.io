@@ -28,23 +28,23 @@
       }
 
       void main() {
-        vec2 pos = gl_FragCoord.xy;
+        highp vec2 pos = gl_FragCoord.xy;
         //float size = u_size.x * u_size.y;
         
-        vec2 modulus = floor(mod(pos * 0.5, 8.0));
-        vec2 div = floor(pos/16.0);
-        float mul = min(modulus.x * modulus.y, 1.0);
+        highp vec2 modulus = floor(mod(pos * 0.5, 8.0));
+        highp vec2 div = floor(pos/16.0);
+        highp float mul = min(modulus.x * modulus.y, 1.0);
         
-        float ti = u_time + rand(div)*1000.0;
+        highp float ti = u_time + rand(div)*1000.0;
         
-        float startTime = floor(ti/1000.0);
-        float stopTime = floor((ti+1000.0)/1000.0);
-        float time = ti/1000.0;
-        float percent = floor((time - startTime)*10.0)/10.0;
+        highp float startTime = floor(ti/1000.0);
+        highp float stopTime = floor((ti+1000.0)/1000.0);
+        highp float time = ti/1000.0;
+        highp float percent = floor((time - startTime)*10.0)/10.0;
         
-        float start = rand(div + mod(vec2(startTime,startTime) * u_size, 12345.0) );
-        float stop  = rand(div + mod(vec2(stopTime,stopTime) * u_size, 12345.0) );
-        vec3 color = u_color * (start * (1.0 - percent) + stop * percent);
+        highp float start = rand(div + mod(vec2(startTime,startTime) * u_size, 1234.0) );
+        highp float stop  = rand(div + mod(vec2(stopTime,stopTime) * u_size, 1234.0) );
+        highp vec3 color = u_color * (start * (1.0 - percent) + stop * percent);
         
         color = pow(color, vec3(2.2) );//gamma
         
