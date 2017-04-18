@@ -10,7 +10,7 @@
     </script>
     <!-- fragment shader -->
     <script id="fragShader" type="x-shader/x-fragment">
-      precision mediump float;
+      precision highp float;
 
       uniform vec2 u_size;
       uniform vec3 u_color;
@@ -27,7 +27,7 @@
         vec2 modulus = floor(mod(pos * 0.5, 8.0));
         vec2 div = floor(pos/16.0);
         float mul = min(modulus.x * modulus.y, 1.0);
-        /*
+        
         float ti = u_time + rand(div)*1000.0;
         
         float startTime = floor(ti/1000.0);
@@ -40,8 +40,8 @@
         vec3 color = u_color * (start * (1.0 - percent) + stop * percent);
         
         color = pow(color, vec3(2.2) );//gamma
-        */
-        gl_FragColor = vec4(u_color*(mul),1.0);
+        
+        gl_FragColor = vec4(color*(mul),1.0);
 
       }
     </script>
