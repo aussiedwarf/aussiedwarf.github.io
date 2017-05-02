@@ -11,38 +11,80 @@
     <!-- fragment shader -->
     <script id="fragShader" type="x-shader/x-fragment">
       precision mediump float;
+      
+      //https://community.arm.com/graphics/b/blog/posts/benchmarking-floating-point-precision-in-mobile-gpus
+      //mali400 has 10 bit precision and no mediump
 
       uniform vec2 u_size;
       uniform vec3 u_color;
-      uniform float u_time;
+      uniform vec2 u_time;
       
       float rand(vec2 co){
+        //original one liner
         //return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453);
-        return 1.0;
+        
+        //since opengl es only garantees that mediump will be 10 bits, we need to try and 
+        //keep the numbers low. The actual constants are mostly arbilitary chosen with the
+        //goal to give different weightings to the first or seccond element
+
+        float dd1 = dot(co, vec2(0.129898,0.78233));
+        float dd2 = dot(co, vec2(0.689898,0.23233));
+        float dd3 = dot(co, vec2(0.434198,0.51833));
+
+        float mm = sin(dd1) * 4.37585453723 + sin(dd2) * 2.465973 + sin(dd3) * 3.18438;
+        float re = fract(mm);
+        return re;
+        
+      }
+      
+      //add hi low number. 
+      vec2 Add2(vec2 a1, vec2 a2)
+      {
+        vec2 t = a1 + a2;
+        t.x += floor(t.y/1000.0);
+        t.y /= 1000.0;
+        
+        return t;
+      }
+      
+      //only need very basic subtraction
+      vec2 Sub2(vec2 a1, vec2 a2)
+      {
+        return a1 - a2;
       }
 
       void main() {
+        float gamma = 2.2;
         vec2 pos = gl_FragCoord.xy;
+        
         //float size = u_size.x * u_size.y;
         
+        //generate black grid
         vec2 modulus = floor(mod(pos * 0.5, 8.0));
         vec2 div = floor(pos/16.0);
-        float mul = min(modulus.x * modulus.y, 1.0);
+        float grid = min(modulus.x * modulus.y, 1.0);
         
-        float ti = u_time + rand(div)*1000.0;
+        vec2 ti = u_time;
+        float r = rand(div);
+        ti.y += r*1000.0;
+        ti.x += floor(ti.y/1000.0);
+        ti.y = mod(ti.y,1000.0);
         
-        float startTime = floor(ti/1000.0);
-        float stopTime = floor((ti+1000.0)/1000.0);
-        float time = ti/1000.0;
-        float percent = floor((time - startTime)*10.0)/10.0;
+        vec2 startTime = ti;
+        startTime.y = 0.0;
+        vec2 stopTime = Add2(ti, vec2(1.0,0.0));
+        stopTime.y = 0.0;
+        vec2 time = ti;
+        float percent = floor(Sub2(time, startTime).y/100.0)/10.0;
         
-        float start = rand(div + mod(vec2(startTime,startTime) * u_size, 12345.0) );
-        float stop  = rand(div + mod(vec2(stopTime,stopTime) * u_size, 12345.0) );
+        float start = rand(div + mod(startTime * u_size, 1234.0) );
+        float stop  = rand(div + mod(stopTime * u_size, 1234.0) );
         vec3 color = u_color * (start * (1.0 - percent) + stop * percent);
         
-        color = pow(color, vec3(2.2) );//gamma
-        
-        gl_FragColor = vec4(color*(mul),1.0);
+        //convert from linear color space to gamma and apply grid
+        color = pow(color, vec3(gamma) ) * grid;
+
+        gl_FragColor = vec4(color,1.0);
 
       }
     </script>
@@ -58,8 +100,7 @@ $(document).ready(function() {
   var lastFrame = 0;
   
   InitShaders();
-  
-
+ 
   gl.viewport(0, 0, canvas.width, canvas.height);
   
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
@@ -74,6 +115,9 @@ $(document).ready(function() {
     var d = new Date();
     var t = d.getTime()
     var time = Math.floor((t - startTime));
+    var seconds = Math.floor(time/1000);
+    var milliseconds = (time % 1000);
+    
     if( (t - lastFrame) >= 16)
     {
     
@@ -92,7 +136,7 @@ $(document).ready(function() {
   
       gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, renderInfo.indicies);
   
-      gl.uniform1f(renderInfo.u_time, time);
+      gl.uniform2f(renderInfo.u_time, seconds, milliseconds);
       gl.uniform2f(renderInfo.u_size, canvas.width, canvas.height);
       gl.uniform3f(renderInfo.u_color, 0.0,0.0,1.0);
   
