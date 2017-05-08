@@ -15,9 +15,10 @@
           </div>
       
           {% assign numPosts = site.posts | size | minus:2 %}
-          {% assign prev = site.posts[numPosts] %}
+          {% assign prev = site.posts[1] %}
           <div class="PageNavigation">
-          <a class="prev" href="{{prev.url}}">&laquo; Prev {{prev.title}}</a>
+            <a class="prev" href="{{prev.url}}">&laquo; Prev {{prev.title}}</a>
+            {{site.posts[2].title}}
           </div>
       
         </div>
