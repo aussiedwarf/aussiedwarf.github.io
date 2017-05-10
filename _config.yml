@@ -10,6 +10,7 @@ github_username:  aussiedwarf
 
 # Build settings
 markdown: kramdown
-
+highlighter: rouge
+  
 sass:
     sass_dir: _sass

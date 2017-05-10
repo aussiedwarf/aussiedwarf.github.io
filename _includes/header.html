@@ -5,13 +5,26 @@
 $(document).ready(function() {
   var barHeight = 50;
   var c=document.getElementById("canvasHeader");
+  
+  var width = window.innerWidth;
+  var height = window.innerHeight - barHeight;
 
-  c.width = window.innerWidth;
-  c.height = window.innerHeight - barHeight;
+  c.width = width * window.devicePixelRatio;
+  c.height = height * window.devicePixelRatio;
+  
+  c.style.width  = width + 'px';
+  c.style.height = height + 'px';
 
   window.onresize = function(event) {
-    c.width = window.innerWidth;
-    c.height = window.innerHeight - barHeight;
+  
+    var width = window.innerWidth;
+    var height = window.innerHeight - barHeight;
+
+    c.width = width * window.devicePixelRatio;
+    c.height = height * window.devicePixelRatio;
+  
+    c.style.width  = width + 'px';
+    c.style.height = height + 'px';
   };
   
   $(window).scroll(function () {

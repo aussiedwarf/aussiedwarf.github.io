@@ -21,20 +21,21 @@
       
       float rand(vec2 co){
         //original one liner
-        //return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453);
-        
+        return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453);
+        /*
         //since opengl es only garantees that mediump will be 10 bits, we need to try and 
         //keep the numbers low. The actual constants are mostly arbilitary chosen with the
         //goal to give different weightings to the first or seccond element
-
-        float dd1 = dot(co, vec2(0.129898,0.78233));
-        float dd2 = dot(co, vec2(0.689898,0.23233));
-        float dd3 = dot(co, vec2(0.434198,0.51833));
-
-        float mm = sin(dd1) * 4.37585453723 + sin(dd2) * 2.465973 + sin(dd3) * 3.18438;
-        float re = fract(mm);
-        return re;
-        
+ 
+        vec3 product = vec3(  sin( dot(co, vec2(0.129898,0.78233))),
+                              sin( dot(co, vec2(0.689898,0.23233))),
+                              sin( dot(co, vec2(0.434198,0.51833))) );
+                              
+                              
+        vec3 weighting = vec3(4.37585453723, 2.465973, 3.18438);
+     
+        return fract(dot(weighting, product));
+        */
       }
       
       //add hi low number. 
@@ -54,7 +55,7 @@
       }
 
       void main() {
-        float gamma = 2.2;
+        float gamma = 1.0;
         vec2 pos = gl_FragCoord.xy;
         
         //float size = u_size.x * u_size.y;
