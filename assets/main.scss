@@ -105,7 +105,7 @@ body {
 
 .footer {
     width: 100%;
-    height: auto;
+    //height: auto;
     background-color: $barColor;
     color: $barFontColor;
     font-family: $barFont;
@@ -114,10 +114,11 @@ body {
     left: 0px;
     //overflow: hidden;
     //border-radius: 0px;
-    position: relative;
+    //position: relative;
     margin: 0px;
     padding: 5px;
     display: block;
+    box-sizing: border-box;
 }
 
 //http://david.elbe.me/jekyll/2015/06/20/how-to-link-to-next-and-previous-post-with-jekyll.html
