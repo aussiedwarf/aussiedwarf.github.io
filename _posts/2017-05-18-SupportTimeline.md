@@ -118,14 +118,40 @@ $(document).ready(function() {
     
     var ctx = c.getContext("2d");
     
+    ctx.font="12px Verdana";
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#b0b0b0";
+    
     //Draw dates
+    var maxDateYear = new Date(maxDate);
+    var minDateYear = new Date(minDate);
+    var numYears = maxDateYear.getFullYear() - minDateYear.getFullYear() + 2;
+    var startYear = new Date(minDate);
+    startYear.setFullYear(minDateYear.getFullYear() - 1);
+    startYear.setMonth(0);
+    startYear.setDate(0);
+    for(var i = 0; i < numYears; i++)
+    {
+      var x = (startYear.getTime() - minDate)*dateWidth;
+      
+      
+      ctx.beginPath();
+      ctx.moveTo(x,0);
+      ctx.lineTo(x,height);
+      ctx.stroke();
+      
+      ctx.fillText(startYear.getFullYear(), x, rowHeight-3);
+      
+      startYear.setFullYear(startYear.getFullYear() + 1);
+    }
     
     
-    ctx.font="14px Verdana";
+    
     
     var pos = 0;
     var lineWidth = 4;
     
+    ctx.font="14px Verdana";
     ctx.lineWidth = lineWidth;
     
     
