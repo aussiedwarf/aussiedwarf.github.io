@@ -20,11 +20,11 @@ $(document).ready(function() {
   var width = window.innerWidth;
   var height = window.innerHeight - barHeight;
 
-  c.width = width * window.devicePixelRatio;
-  c.height = height * window.devicePixelRatio;
+  //c.width = width * window.devicePixelRatio;
+  //c.height = height * window.devicePixelRatio;
   
-  c.style.width  = width + 'px';
-  c.style.height = height + 'px';
+  //c.style.width  = width + 'px';
+  //c.style.height = height + 'px';
 
 
   
@@ -35,6 +35,8 @@ $(document).ready(function() {
     var height = 0;
     var minDate = Date.now();
     var maxDate = Date.now();
+    
+    
     
     for(var i = 0; i < data.length; i++)
     {
@@ -115,6 +117,10 @@ $(document).ready(function() {
     c.style.height = height + 'px';
     
     var ctx = c.getContext("2d");
+    
+    //Draw dates
+    
+    
     ctx.font="14px Verdana";
     
     var pos = 0;
@@ -133,6 +139,7 @@ $(document).ready(function() {
 
           var date;
           var left;
+          var mid;
           
           pos += rowHeight;
           
@@ -147,29 +154,45 @@ $(document).ready(function() {
             
           
             ctx.strokeStyle = "red";
-            ctx.fillStyle = "rgba(255,0,0,0.5)";
+            ctx.fillStyle = "rgba(255,0,0,0.67)";
             
           
             if(data[i].data[j].mainstream_support)
             {
               date = Date.parse(data[i].data[j].mainstream_support);
               var w = (date - minDate) * dateWidth - left;
-
+              
               ctx.fillRect(left+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
               ctx.strokeRect(left+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
+              
+              mid = left + w;
 
             }
           
             if(data[i].data[j].extended_support)
             {
+              ctx.fillStyle = "rgba(255,0,0,0.33)";
+              
               date = Date.parse(data[i].data[j].extended_support);
-          
-            
+              var w = (date - minDate) * dateWidth - mid;
+              
+              ctx.fillRect(mid+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
+              ctx.strokeRect(mid+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
+              
+              mid = mid + w;
             }
           
             if(data[i].data[j].private_support)
             {
+              ctx.fillStyle = "rgba(255,0,0,0.0)";
+              
               date = Date.parse(data[i].data[j].private_support);
+              var w = (date - minDate) * dateWidth - mid;
+              
+              ctx.fillRect(mid+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
+              ctx.strokeRect(mid+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
+              
+              mid = mid + w;
           
             }
             
