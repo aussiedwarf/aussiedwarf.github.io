@@ -15,9 +15,12 @@
           
           {{ content }}
           
-          {% include disqus.html %}
-      
           {% include pagenavigation.html %}
+          
+          {% assign disqusUrl = 'http://www.aussiedwarf.com' | append: page.url %}
+          {% assign disqusId = page.id %}
+          
+          {% include disqus.html %}
         </div>
       </div>
       {% include footer.html %}

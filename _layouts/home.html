@@ -19,6 +19,10 @@
           <div class="PageNavigation">
             <a class="prev" href="{{prev.url}}">&laquo; Prev {{prev.title}}</a>
           </div>
+          
+          {% assign disqusUrl = 'http://www.aussiedwarf.com' | append: post.url %}
+          {% assign disqusId = post.id %}
+          {% include disqus.html %}
       
         </div>
       </div>
