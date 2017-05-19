@@ -10,6 +10,17 @@ So I have decided to try and put together the timelines (as wibbly wobbly timey 
 
 There are many types of support offered by different organizations. For this I shall define 3 types that seem to cover the different types offered. One is full support, which should include added hardware, features and security support. Two is extended support, that includes security patches. Thirdly is paid support, typically only offered to those specifically paying for it and usually only includes security updates.
 
+<table id="tableTimelines">
+  <tr>
+    <th>Name</th>
+    <th>Release</th>
+    <th>Full</th>
+    <th>Extended</th>
+    <th>Private</th>
+    <th>Reference</th>
+  </tr>
+</table>
+
 <canvas id="canvasTimelines" width="100" height="100" 
   style="border: 1px solid #e8e8e8;"></canvas>
 
@@ -123,6 +134,9 @@ $(document).ready(function() {
     ctx.lineWidth = 1;
     ctx.strokeStyle = "#b0b0b0";
     
+    //create table
+    var table = document.getElementById("tableTimelines");
+    
     //Draw dates
     var maxDateYear = new Date(maxDate);
     var minDateYear = new Date(minDate);
@@ -151,6 +165,7 @@ $(document).ready(function() {
     
     var pos = 0;
     var lineWidth = 4;
+    var tableRow = 1;
     
     ctx.font="14px Verdana";
     ctx.lineWidth = lineWidth;
@@ -176,6 +191,20 @@ $(document).ready(function() {
           if(data[i].data[j].release)
           {
             date = Date.parse(data[i].data[j].release);
+            
+            var row = table.insertRow(tableRow);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+            
+            tableRow++;
+            
+            cell1.innerHTML = data[i].data[j].name;
+            cell2.innerHTML = data[i].data[j].release;
+            cell6.innerHTML = "<a href='" + data[i].data[j].ref + "'>" + data[i].data[j].ref + "</a>"
           
             left = (date - minDate) * dateWidth;
             
@@ -193,6 +222,8 @@ $(document).ready(function() {
               ctx.strokeRect(left+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
               
               mid = left + w;
+              
+              cell3.innerHTML = data[i].data[j].mainstream_support;
 
             }
           
@@ -207,6 +238,8 @@ $(document).ready(function() {
               ctx.strokeRect(mid+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
               
               mid = mid + w;
+              
+              cell4.innerHTML = data[i].data[j].extended_support;
             }
           
             if(data[i].data[j].private_support)
@@ -220,6 +253,8 @@ $(document).ready(function() {
               ctx.strokeRect(mid+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
               
               mid = mid + w;
+              
+              cell5.innerHTML = data[i].data[j].private_support;
           
             }
             
@@ -252,3 +287,5 @@ $(document).ready(function() {
 });
   
 </script>
+
+

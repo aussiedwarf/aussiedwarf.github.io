@@ -13,6 +13,14 @@ body {
   margin: 0;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid grey;
+}
+
 #middle-outer{
   position: relative;
   width: 100%;
