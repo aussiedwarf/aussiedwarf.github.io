@@ -70,6 +70,11 @@
       "release":"2016-09-20",
       "mainstream_support":"2019-09-01"
     },{
+      "name":"MacOS 10.13 High Sierra",
+      "organization":"Apple",
+      "release":"2017-09-25",
+      "mainstream_support":"2020-09-01"
+    },{
       "name":"Debian 6.0 Squeeze",
       "organization":"Debian",
       "release":"2011-02-06",
@@ -87,8 +92,15 @@
       "name":"Debian 8.0 Jessie",
       "organization":"Debian",
       "release":"2015-04-25",
-      "mainstream_support":"2018-04-01",
-      "extended_support":"2020-04-01",
+      "mainstream_support":"2018-06-17",
+      "extended_support":"2020-06-30",
+      "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
+    },{
+      "name":"Debian 9.0 Stretch",
+      "organization":"Debian",
+      "release":"2017-06-17",
+      "mainstream_support":"2020-01-01",
+      "extended_support":"2022-06-01",
       "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
     },{
       "name":"Red Hat Enterprise Linux 3",
@@ -175,6 +187,18 @@
       "organization":"Canonical",
       "release":"2017-04-13",
       "mainstream_support":"2018-01-01",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 17.10 Artful Aardvark",
+      "organization":"Canonical",
+      "release":"2017-10-19",
+      "mainstream_support":"2018-07-01",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 18.04 Bionic Beaver",
+      "organization":"Canonical",
+      "release":"2018-04-26",
+      "mainstream_support":"2023-04-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     }
   ]},{

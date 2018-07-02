@@ -117,7 +117,7 @@ $(document).ready(function() {
     
     
     
-    width = window.innerWidth / 2;
+    width = window.innerWidth *3 / 4;
     height = height + rowHeight*2;
     
     var dateWidth = width / (maxDate - minDate);
@@ -155,7 +155,7 @@ $(document).ready(function() {
       ctx.lineTo(x,height);
       ctx.stroke();
       
-      ctx.fillText(startYear.getFullYear(), x, rowHeight-3);
+      ctx.fillText(startYear.getFullYear()+1, x, rowHeight-3);
       
       startYear.setFullYear(startYear.getFullYear() + 1);
     }
