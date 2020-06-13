@@ -38,11 +38,67 @@
       "extended_support":"2023-01-10",
       "ref":"https://en.wikipedia.org/wiki/Windows_8.1"
     },{
-      "name":"Windows 10",
+      "name":"Windows 10, 1507",
       "organization":"Microsoft",
-      "release":"2015-07-29",
-      "mainstream_support":"2020-10-13",
+      "release":"2015-06-29",
+      "mainstream_support":"2017-05-09",
       "extended_support":"2025-10-14",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
+      "name":"Windows 10, 1511",
+      "organization":"Microsoft",
+      "release":"2015-11-10",
+      "mainstream_support":"2017-10-10",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
+      "name":"Windows 10, 1607",
+      "organization":"Microsoft",
+      "release":"2016-08-02",
+      "mainstream_support":"2018-04-10",
+      "extended_support":"2026-10-13",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
+      "name":"Windows 10, 1703",
+      "organization":"Microsoft",
+      "release":"2017-04-05",
+      "mainstream_support":"2018-10-09",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
+      "name":"Windows 10, 1709",
+      "organization":"Microsoft",
+      "release":"2017-10-17",
+      "mainstream_support":"2019-04-09",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
+      "name":"Windows 10, 1803",
+      "organization":"Microsoft",
+      "release":"2018-04-30",
+      "mainstream_support":"2019-11-12",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
+      "name":"Windows 10, 1809",
+      "organization":"Microsoft",
+      "release":"2018-10-02",
+      "mainstream_support":"2020-11-10",
+      "extended_support":"2029-01-09",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
+      "name":"Windows 10, 1903",
+      "organization":"Microsoft",
+      "release":"2019-05-21",
+      "mainstream_support":"2020-12-08",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
+      "name":"Windows 10, 1909",
+      "organization":"Microsoft",
+      "release":"2019-11-12",
+      "mainstream_support":"2021-05-11",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
+      "name":"Windows 10, 2004",
+      "organization":"Microsoft",
+      "release":"2020-05-27",
+      "mainstream_support":"2021-12-14",
       "ref":"https://en.wikipedia.org/wiki/Windows_10"
     },{
       "name":"OS X 10.8 Mountain Lion",
@@ -184,7 +240,7 @@
       "organization":"Canonical",
       "release":"2014-04-27",
       "mainstream_support":"2019-04-01",
-      "extended_support":"2022-04-01",
+      "private_support":"2022-04-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
       "name":"Ubuntu 14.10 LTS Utopic Unicorn",
@@ -209,7 +265,7 @@
       "organization":"Canonical",
       "release":"2016-04-21",
       "mainstream_support":"2021-04-01",
-      "extended_support":"2024-04-01",
+      "private_support":"2024-04-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
       "name":"Ubuntu 16.10 Yakkety Yak",
@@ -234,7 +290,7 @@
       "organization":"Canonical",
       "release":"2018-04-26",
       "mainstream_support":"2023-04-01",
-      "extended_support":"2028-04-01",
+      "private_support":"2028-04-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
       "name":"Ubuntu 18.10 Cosmic Cuttlefish",
@@ -259,7 +315,7 @@
       "organization":"Canonical",
       "release":"2020-04-23",
       "mainstream_support":"2025-04-01",
-      "extended_support":"2030-04-01",
+      "private_support":"2030-04-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     }
   ]},{

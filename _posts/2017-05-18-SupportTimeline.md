@@ -45,8 +45,9 @@ $(document).ready(function() {
     var rowHeight = 20 * window.devicePixelRatio;
     var rowSpace = 20 * window.devicePixelRatio;
     var height = 0;
-    var minDate = Date.now();
-    var maxDate = Date.now();
+    var now = Date.now();
+    var minDate = now;
+    var maxDate = now;
     
     var fontSizeData = 14 * window.devicePixelRatio;
     var fontSizeDate = 8 * window.devicePixelRatio
@@ -210,9 +211,33 @@ $(document).ready(function() {
           
             left = (date - minDate) * dateWidth;
             
-          
-            ctx.strokeStyle = "red";
-            ctx.fillStyle = "rgba(255,0,0,0.67)";
+            var extendedColor = "rgba(255,0,0,0.33)";
+            var privateColor = "rgba(255,0,0,0.0)";
+            if(now < Date.parse(data[i].data[j].mainstream_support))
+            {
+              ctx.strokeStyle = "green";
+              ctx.fillStyle = "rgba(0,255,0,0.67)";
+              extendedColor = "rgba(0,255,0,0.33)";
+              privateColor = "rgba(0,255,0,0.0)";
+            }
+            else if(now < Date.parse(data[i].data[j].extended_support))
+            {
+              ctx.strokeStyle = "rgb(191,191,0)";
+              ctx.fillStyle = "rgba(255,255,0,0.67)";
+              extendedColor = "rgba(255,255,0,0.33)";
+              privateColor = "rgba(255,255,0,0.0)";
+            }
+            else if(now < Date.parse(data[i].data[j].private_support))
+            {
+              ctx.strokeStyle = "orange";
+              ctx.fillStyle = "rgba(255,127,0,0.67)";
+              extendedColor = "rgba(255,127,0,0.33)";
+              privateColor = "rgba(255,127,0,0.0)";
+            }
+            else{
+              ctx.strokeStyle = "red";
+              ctx.fillStyle = "rgba(255,0,0,0.67)";
+            }
             
           
             if(data[i].data[j].mainstream_support)
@@ -231,7 +256,7 @@ $(document).ready(function() {
           
             if(data[i].data[j].extended_support)
             {
-              ctx.fillStyle = "rgba(255,0,0,0.33)";
+              ctx.fillStyle = extendedColor;
               
               date = Date.parse(data[i].data[j].extended_support);
               var w = (date - minDate) * dateWidth - mid;
@@ -246,7 +271,7 @@ $(document).ready(function() {
           
             if(data[i].data[j].private_support)
             {
-              ctx.fillStyle = "rgba(255,0,0,0.0)";
+              ctx.fillStyle = privateColor;
               
               date = Date.parse(data[i].data[j].private_support);
               var w = (date - minDate) * dateWidth - mid;
@@ -274,7 +299,7 @@ $(document).ready(function() {
     
     }
     
-    var x = (Date.now() - minDate)* dateWidth;
+    var x = (now - minDate)* dateWidth;
     
     ctx.lineWidth = 2;
     ctx.beginPath();
