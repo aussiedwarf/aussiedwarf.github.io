@@ -7,7 +7,7 @@ $(document).ready(function() {
   var c=document.getElementById("canvasHeader");
   
   var width = window.innerWidth;
-  var height = window.innerHeight - barHeight;
+  var height = window.innerHeight/2 - barHeight;
 
   c.width = width * window.devicePixelRatio;
   c.height = height * window.devicePixelRatio;
@@ -18,7 +18,7 @@ $(document).ready(function() {
   window.onresize = function(event) {
   
     var width = window.innerWidth;
-    var height = window.innerHeight - barHeight;
+    var height = window.innerHeight/2 - barHeight;
 
     c.width = width * window.devicePixelRatio;
     c.height = height * window.devicePixelRatio;
@@ -28,10 +28,10 @@ $(document).ready(function() {
   };
   
   $(window).scroll(function () {
-    if ($(window).scrollTop() >= window.innerHeight - barHeight) {
+    if ($(window).scrollTop() >= window.innerHeight/2 - barHeight) {
       $('#nav').addClass('nav-fixed');
     }
-    if ($(window).scrollTop() < window.innerHeight - barHeight) {
+    if ($(window).scrollTop() < window.innerHeight/2 - barHeight) {
       $('#nav').removeClass('nav-fixed');
     }
   });

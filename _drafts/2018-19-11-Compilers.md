@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Support Timelines'
+title: 'C/C++ Compilers'
 comments: true
 ---
 
@@ -21,7 +21,7 @@ There are many types of support offered by different organizations. For this I s
   </tr>
 </table>
 
-<canvas id="canvasTimelines" width="100%" height="100%" 
+<canvas id="canvasTimelines" width="100" height="100" 
   style="border: 1px solid #e8e8e8;"></canvas>
 
 <script>
@@ -29,8 +29,8 @@ $(document).ready(function() {
   var barHeight = 50;
   var c=document.getElementById("canvasTimelines");
   
-  //var width = window.innerWidth;
-  //var height = window.innerHeight - barHeight;
+  var width = window.innerWidth;
+  var height = window.innerHeight - barHeight;
 
   //c.width = width * window.devicePixelRatio;
   //c.height = height * window.devicePixelRatio;
@@ -42,14 +42,13 @@ $(document).ready(function() {
   
   var jqxhr = $.getJSON( "/assets/support_timelines.json", function( data ) {
     
-    var rowHeight = 20 * window.devicePixelRatio;
-    var rowSpace = 20 * window.devicePixelRatio;
+    var rowHeight = 20;
+    var rowSpace = 20;
     var height = 0;
     var minDate = Date.now();
     var maxDate = Date.now();
     
-    var fontSizeData = 14 * window.devicePixelRatio;
-    var fontSizeDate = 8 * window.devicePixelRatio
+    
     
     for(var i = 0; i < data.length; i++)
     {
@@ -116,29 +115,22 @@ $(document).ready(function() {
       }
     }
     
-    //width = window.innerWidth *2 / 4;
+    
+    
+    width = window.innerWidth *3 / 4;
     height = height + rowHeight*2;
+    
+    var dateWidth = width / (maxDate - minDate);
 
-    console.log("width " + c.width + " " + dateWidth);
-
-    //c.width = width/* * window.devicePixelRatio*/;
+    c.width = width/* * window.devicePixelRatio*/;
     c.height = height/* * window.devicePixelRatio*/;
-
-    var pixelHeight = height / window.devicePixelRatio;
   
-    //c.style.width  = c.width + 'px';
-    c.style.width  = '100%';
-    c.style.height = pixelHeight + 'px';
-
-    c.width = c.offsetWidth * window.devicePixelRatio;
-    c.height = height;
-
-    //var dateWidth = width / (maxDate - minDate);
-    var dateWidth = c.width/ (maxDate - minDate);
+    c.style.width  = width + 'px';
+    c.style.height = height + 'px';
     
     var ctx = c.getContext("2d");
     
-    ctx.font="" + fontSizeDate + "px Verdana";
+    ctx.font="12px Verdana";
     ctx.lineWidth = 1;
     ctx.strokeStyle = "#b0b0b0";
     
@@ -168,11 +160,14 @@ $(document).ready(function() {
       startYear.setFullYear(startYear.getFullYear() + 1);
     }
     
+    
+    
+    
     var pos = 0;
     var lineWidth = 4;
     var tableRow = 1;
     
-    ctx.font="" + fontSizeData + "px Verdana";
+    ctx.font="14px Verdana";
     ctx.lineWidth = lineWidth;
     
     
@@ -189,6 +184,9 @@ $(document).ready(function() {
           var mid;
           
           pos += rowHeight;
+          
+
+          
           
           if(data[i].data[j].release)
           {
@@ -284,6 +282,8 @@ $(document).ready(function() {
     
   })
   
+  
+
 });
   
 </script>

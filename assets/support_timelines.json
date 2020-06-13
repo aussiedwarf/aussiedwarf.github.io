@@ -48,32 +48,50 @@
       "name":"OS X 10.8 Mountain Lion",
       "organization":"Apple",
       "release":"2012-07-25",
-      "mainstream_support":"2015-09-01"
+      "mainstream_support":"2015-09-01",
+      "ref":""
     },{
       "name":"OS X 10.9 Mavericks",
       "organization":"Apple",
       "release":"2013-10-13",
-      "mainstream_support":"2016-09-01"
+      "mainstream_support":"2016-09-01",
+      "ref":""
     },{
       "name":"OS X 10.10 Yosemite",
       "organization":"Apple",
       "release":"2014-10-16",
-      "mainstream_support":"2017-09-01"
+      "mainstream_support":"2017-09-01",
+      "ref":""
     },{
       "name":"OS X 10.11 El Capitan",
       "organization":"Apple",
       "release":"2015-07-09",
-      "mainstream_support":"2018-09-01"
+      "mainstream_support":"2018-09-01",
+      "ref":""
     },{
       "name":"MacOS 10.12 Sierra",
       "organization":"Apple",
       "release":"2016-09-20",
-      "mainstream_support":"2019-09-01"
+      "mainstream_support":"2019-09-01",
+      "ref":""
     },{
       "name":"MacOS 10.13 High Sierra",
       "organization":"Apple",
       "release":"2017-09-25",
-      "mainstream_support":"2020-09-01"
+      "mainstream_support":"2020-09-01",
+      "ref":""
+    },{
+      "name":"MacOS 10.14 Mojave",
+      "organization":"Apple",
+      "release":"2018-09-24",
+      "mainstream_support":"2021-09-01",
+      "ref":""
+    },{
+      "name":"MacOS 10.15 Catalina",
+      "organization":"Apple",
+      "release":"2019-10-07",
+      "mainstream_support":"2022-09-01",
+      "ref":""
     },{
       "name":"Debian 6.0 Squeeze",
       "organization":"Debian",
@@ -101,6 +119,13 @@
       "release":"2017-06-17",
       "mainstream_support":"2020-01-01",
       "extended_support":"2022-06-01",
+      "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
+    },{
+      "name":"Debian 10.0 Buster",
+      "organization":"Debian",
+      "release":"2019-07-09",
+      "mainstream_support":"2022-01-01",
+      "extended_support":"2024-01-01",
       "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
     },{
       "name":"Red Hat Enterprise Linux 3",
@@ -141,19 +166,28 @@
       "extended_support":"2024-06-30",
       "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
     },{
+      "name":"Red Hat Enterprise Linux 8",
+      "organization":"Red Hat",
+      "release":"2019-05-07",
+      "mainstream_support":"2024-05-01",
+      "extended_support":"2029-05-01",
+      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
+    },{
       "name":"Ubuntu 12.04 LTS Precise Pangolin",
       "organization":"Canonical",
       "release":"2012-04-26",
       "mainstream_support":"2017-04-28",
+      "extended_support":"2019-04-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
       "name":"Ubuntu 14.04 LTS Trusty Tahr",
       "organization":"Canonical",
       "release":"2014-04-27",
       "mainstream_support":"2019-04-01",
+      "extended_support":"2022-04-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
-      "name":"Ubuntu 14.10 Utopic Unicorn",
+      "name":"Ubuntu 14.10 LTS Utopic Unicorn",
       "organization":"Canonical",
       "release":"2014-10-23",
       "mainstream_support":"2015-07-23",
@@ -175,6 +209,7 @@
       "organization":"Canonical",
       "release":"2016-04-21",
       "mainstream_support":"2021-04-01",
+      "extended_support":"2024-04-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
       "name":"Ubuntu 16.10 Yakkety Yak",
@@ -195,10 +230,36 @@
       "mainstream_support":"2018-07-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
-      "name":"Ubuntu 18.04 Bionic Beaver",
+      "name":"Ubuntu 18.04 LTS Bionic Beaver",
       "organization":"Canonical",
       "release":"2018-04-26",
       "mainstream_support":"2023-04-01",
+      "extended_support":"2028-04-01",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 18.10 Cosmic Cuttlefish",
+      "organization":"Canonical",
+      "release":"2018-10-18",
+      "mainstream_support":"2019-07-18",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 19.04 Disco Dingo",
+      "organization":"Canonical",
+      "release":"2019-04-18",
+      "mainstream_support":"2020-01-23",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 19.10 Eoan Ermine",
+      "organization":"Canonical",
+      "release":"2019-10-17",
+      "mainstream_support":"2020-07-01",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 20.04 LTS Focal Fossa",
+      "organization":"Canonical",
+      "release":"2020-04-23",
+      "mainstream_support":"2025-04-01",
+      "extended_support":"2030-04-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     }
   ]},{
