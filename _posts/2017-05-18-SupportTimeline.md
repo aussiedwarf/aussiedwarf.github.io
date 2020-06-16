@@ -21,7 +21,7 @@ There are many types of support offered by different organizations. For this I s
   </tr>
 </table>
 
-<canvas id="canvasTimelines" width="100%" height="100%" 
+<canvas id="canvasTimelines" width="100" height="100" 
   style="border: 1px solid #e8e8e8;"></canvas>
 
 <script>
