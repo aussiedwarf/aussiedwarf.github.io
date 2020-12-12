@@ -102,6 +102,12 @@
       "mainstream_support":"2021-12-14",
       "ref":"https://en.wikipedia.org/wiki/Windows_10"
     },{
+      "name":"Windows 10, 20H2",
+      "organization":"Microsoft",
+      "release":"2020-10-20",
+      "mainstream_support":"2022-05-10",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
       "name":"Windows Server 2003",
       "organization":"Microsoft",
       "release":"2003-04-24",
@@ -180,7 +186,7 @@
       "name":"MacOS 10.12 Sierra",
       "organization":"Apple",
       "release":"2016-09-20",
-      "mainstream_support":"2019-09-01",
+      "mainstream_support":"2019-10-01",
       "ref":""
     },{
       "name":"MacOS 10.13 High Sierra",
@@ -198,7 +204,13 @@
       "name":"MacOS 10.15 Catalina",
       "organization":"Apple",
       "release":"2019-10-07",
-      "mainstream_support":"2022-09-01",
+      "mainstream_support":"2022-10-01",
+      "ref":""
+    },{
+      "name":"MacOS 11.0 Big Sur",
+      "organization":"Apple",
+      "release":"2020-11-12",
+      "mainstream_support":"2023-09-01",
       "ref":""
     },{
       "name":"Debian 6.0 Squeeze",
@@ -368,6 +380,12 @@
       "release":"2020-04-23",
       "mainstream_support":"2025-04-01",
       "private_support":"2030-04-01",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 20.10 Groovy Gorilla",
+      "organization":"Canonical",
+      "release":"2020-10-22",
+      "mainstream_support":"2020-07-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     }
   ]},{

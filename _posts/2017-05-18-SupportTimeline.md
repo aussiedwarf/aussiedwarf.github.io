@@ -10,17 +10,6 @@ So I have decided to try and put together the timelines (as wibbly wobbly timey 
 
 There are many types of support offered by different organizations. For this I shall define 3 types that seem to cover the different types offered. One is full support, which should include added hardware, features and security support. Two is extended support, that includes security patches. Thirdly is paid support, typically only offered to those specifically paying for it and usually only includes security updates.
 
-<table id="tableTimelines">
-  <tr>
-    <th>Name</th>
-    <th>Release</th>
-    <th>Full</th>
-    <th>Extended</th>
-    <th>Private</th>
-    <th>Reference</th>
-  </tr>
-</table>
-
 <canvas id="canvasTimelines" width="100" height="100" 
   style="border: 1px solid #e8e8e8;"></canvas>
 
@@ -313,4 +302,13 @@ $(document).ready(function() {
   
 </script>
 
-
+<table id="tableTimelines">
+  <tr>
+    <th>Name</th>
+    <th>Release</th>
+    <th>Full</th>
+    <th>Extended</th>
+    <th>Private</th>
+    <th>Reference</th>
+  </tr>
+</table>
