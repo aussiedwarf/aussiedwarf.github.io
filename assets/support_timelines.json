@@ -108,6 +108,39 @@
       "mainstream_support":"2022-05-10",
       "ref":"https://en.wikipedia.org/wiki/Windows_10"
     },{
+      "name":"Windows 10, 21H1",
+      "organization":"Microsoft",
+      "release":"2021-05-18",
+      "mainstream_support":"2022-12-13",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
+      "name":"Windows 10, 21H2",
+      "organization":"Microsoft",
+      "release":"2021-11-16",
+      "mainstream_support":"2023-06-13",
+      "extended_support":"2027-01-12",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
+      "name":"Windows 10, 22H2",
+      "organization":"Microsoft",
+      "release":"2022-10-18",
+      "mainstream_support":"2024-05-14",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+    },{
+      "name":"Windows 11, 21H2",
+      "organization":"Microsoft",
+      "release":"2021-10-04",
+      "mainstream_support":"2023-10-10",
+      "extended_support":"2024-10-08",
+      "ref":"https://en.wikipedia.org/wiki/Windows_11"
+    },{
+      "name":"Windows 11, 22H2",
+      "organization":"Microsoft",
+      "release":"2022-09-20",
+      "mainstream_support":"2024-10-08",
+      "extended_support":"2025-10-14",
+      "ref":"https://en.wikipedia.org/wiki/Windows_11"
+    },{
       "name":"Windows Server 2003",
       "organization":"Microsoft",
       "release":"2003-04-24",
@@ -158,6 +191,13 @@
       "mainstream_support":"2024-01-09",
       "extended_support":"2029-01-09",
       "ref":"https://en.wikipedia.org/wiki/Windows_Server_2019"
+    },{
+      "name":"Windows Server 2022",
+      "organization":"Microsoft",
+      "release":"2021-08-18",
+      "mainstream_support":"2026-10-13",
+      "extended_support":"2031-10-14",
+      "ref":"https://en.wikipedia.org/wiki/Windows_Server_2022"
     },{
       "name":"OS X 10.8 Mountain Lion",
       "organization":"Apple",
@@ -211,6 +251,18 @@
       "organization":"Apple",
       "release":"2020-11-12",
       "mainstream_support":"2023-09-01",
+      "ref":""
+    },{
+      "name":"MacOS 12.0 Monterey",
+      "organization":"Apple",
+      "release":"2021-10-25",
+      "mainstream_support":"2024-09-01",
+      "ref":""
+    },{
+      "name":"MacOS 13.0 Ventura",
+      "organization":"Apple",
+      "release":"2022-10-24",
+      "mainstream_support":"2025-09-01",
       "ref":""
     },{
       "name":"Debian 6.0 Squeeze",
@@ -291,6 +343,13 @@
       "release":"2019-05-07",
       "mainstream_support":"2024-05-01",
       "extended_support":"2029-05-01",
+      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
+    },{
+      "name":"Red Hat Enterprise Linux 9",
+      "organization":"Red Hat",
+      "release":"2022-05-17",
+      "mainstream_support":"2027-05-01",
+      "extended_support":"2032-05-01",
       "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
     },{
       "name":"Ubuntu 12.04 LTS Precise Pangolin",
@@ -386,6 +445,31 @@
       "organization":"Canonical",
       "release":"2020-10-22",
       "mainstream_support":"2021-07-01",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 21.04 Hirsute Hippo",
+      "organization":"Canonical",
+      "release":"2021-04-22",
+      "mainstream_support":"2022-01-20",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 21.10 Impish Indri",
+      "organization":"Canonical",
+      "release":"2021-10-14",
+      "mainstream_support":"2022-07-14",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 22.04 LTS Jammy Jellyfish",
+      "organization":"Canonical",
+      "release":"2022-04-21",
+      "mainstream_support":"2027-04-21",
+      "private_support":"2032-04-21",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 22.10 Kinetic Kudu",
+      "organization":"Canonical",
+      "release":"2022-10-20",
+      "mainstream_support":"2023-07-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     }
   ]},{
