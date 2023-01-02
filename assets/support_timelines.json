@@ -300,6 +300,13 @@
       "extended_support":"2024-01-01",
       "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
     },{
+        "name":"Debian 11.0 Bullseye",
+        "organization":"Debian",
+        "release":"2021-08-14",
+        "mainstream_support":"2024-07-01",
+        "extended_support":"2026-07-01",
+        "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
+    },{
       "name":"Red Hat Enterprise Linux 3",
       "organization":"Red Hat",
       "release":"2003-10-23",
