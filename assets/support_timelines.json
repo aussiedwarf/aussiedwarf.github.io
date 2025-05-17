@@ -36,110 +36,126 @@
       "organization":"Microsoft",
       "release":"2013-10-17",
       "mainstream_support":"2018-01-09",
-      "extended_support":"2023-01-10",
+      "enterprise_support":"2023-01-10",
       "ref":"https://en.wikipedia.org/wiki/Windows_8.1"
     },{
       "name":"Windows 10, 1507",
       "organization":"Microsoft",
       "release":"2015-06-29",
       "mainstream_support":"2017-05-09",
-      "extended_support":"2025-10-14",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "enterprise_support":"2025-10-14",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 1511",
       "organization":"Microsoft",
       "release":"2015-11-10",
       "mainstream_support":"2017-10-10",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 1607",
       "organization":"Microsoft",
       "release":"2016-08-02",
       "mainstream_support":"2018-04-10",
-      "extended_support":"2026-10-13",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "enterprise_support":"2026-10-13",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 1703",
       "organization":"Microsoft",
       "release":"2017-04-05",
       "mainstream_support":"2018-10-09",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 1709",
       "organization":"Microsoft",
       "release":"2017-10-17",
       "mainstream_support":"2019-04-09",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 1803",
       "organization":"Microsoft",
       "release":"2018-04-30",
       "mainstream_support":"2019-11-12",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 1809",
       "organization":"Microsoft",
       "release":"2018-10-02",
       "mainstream_support":"2020-11-10",
-      "extended_support":"2029-01-09",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "enterprise_support":"2029-01-09",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 1903",
       "organization":"Microsoft",
       "release":"2019-05-21",
       "mainstream_support":"2020-12-08",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 1909",
       "organization":"Microsoft",
       "release":"2019-11-12",
       "mainstream_support":"2021-05-11",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 2004",
       "organization":"Microsoft",
       "release":"2020-05-27",
       "mainstream_support":"2021-12-14",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 20H2",
       "organization":"Microsoft",
       "release":"2020-10-20",
       "mainstream_support":"2022-05-10",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 21H1",
       "organization":"Microsoft",
       "release":"2021-05-18",
       "mainstream_support":"2022-12-13",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 21H2",
       "organization":"Microsoft",
       "release":"2021-11-16",
       "mainstream_support":"2023-06-13",
-      "extended_support":"2027-01-12",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "enterprise_support":"2027-01-12",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 10, 22H2",
       "organization":"Microsoft",
       "release":"2022-10-18",
       "mainstream_support":"2025-10-14",
-      "ref":"https://en.wikipedia.org/wiki/Windows_10"
+      "private_support":"2026-10-13",
+      "private_enterprise_support":"2028-10-10",
+      "ref":"https://en.wikipedia.org/wiki/Windows_10_version_history"
     },{
       "name":"Windows 11, 21H2",
       "organization":"Microsoft",
       "release":"2021-10-04",
       "mainstream_support":"2023-10-10",
-      "extended_support":"2024-10-08",
-      "ref":"https://en.wikipedia.org/wiki/Windows_11"
+      "enterprise_support":"2024-10-08",
+      "ref":"https://en.wikipedia.org/wiki/Windows_11_version_history"
     },{
       "name":"Windows 11, 22H2",
       "organization":"Microsoft",
       "release":"2022-09-20",
       "mainstream_support":"2024-10-08",
-      "extended_support":"2025-10-14",
-      "ref":"https://en.wikipedia.org/wiki/Windows_11"
+      "enterprise_support":"2025-10-14",
+      "ref":"https://en.wikipedia.org/wiki/Windows_11_version_history"
+    },{
+      "name":"Windows 11, 23H2",
+      "organization":"Microsoft",
+      "release":"2023-10-31",
+      "mainstream_support":"2025-11-11",
+      "enterprise_support":"2026-11-10",
+      "ref":"https://en.wikipedia.org/wiki/Windows_11_version_history"
+    },{
+      "name":"Windows 11, 24H2",
+      "organization":"Microsoft",
+      "release":"2024-10-01",
+      "mainstream_support":"2026-10-13",
+      "enterprise_support":"2027-10-12",
+      "ref":"https://en.wikipedia.org/wiki/Windows_11_version_history"
     },{
       "name":"Windows Server 2003",
       "organization":"Microsoft",
@@ -199,6 +215,13 @@
       "extended_support":"2031-10-14",
       "ref":"https://en.wikipedia.org/wiki/Windows_Server_2022"
     },{
+      "name":"Windows Server 2025",
+      "organization":"Microsoft",
+      "release":"2024-11-01",
+      "mainstream_support":"2029-10-09",
+      "extended_support":"2034-10-10",
+      "ref":"https://en.wikipedia.org/wiki/Windows_Server_2022"
+    },{
       "name":"OS X 10.8 Mountain Lion",
       "organization":"Apple",
       "release":"2012-07-25",
@@ -250,19 +273,31 @@
       "name":"MacOS 11.0 Big Sur",
       "organization":"Apple",
       "release":"2020-11-12",
-      "mainstream_support":"2023-09-01",
+      "mainstream_support":"2023-09-26",
       "ref":""
     },{
       "name":"MacOS 12.0 Monterey",
       "organization":"Apple",
       "release":"2021-10-25",
-      "mainstream_support":"2024-09-01",
+      "mainstream_support":"2024-09-16",
       "ref":""
     },{
       "name":"MacOS 13.0 Ventura",
       "organization":"Apple",
       "release":"2022-10-24",
       "mainstream_support":"2025-09-01",
+      "ref":""
+    },{
+      "name":"MacOS 14.0 Sonoma",
+      "organization":"Apple",
+      "release":"2023-09-26",
+      "mainstream_support":"2026-09-01",
+      "ref":""
+    },{
+      "name":"MacOS 15.0 Sequoia",
+      "organization":"Apple",
+      "release":"2024-09-16",
+      "mainstream_support":"2027-09-01",
       "ref":""
     },{
       "name":"Debian 6.0 Squeeze",
@@ -303,14 +338,15 @@
       "name":"Debian 11.0 Bullseye",
       "organization":"Debian",
       "release":"2021-08-14",
-      "mainstream_support":"2024-07-01",
-      "extended_support":"2026-07-01",
+      "mainstream_support":"2024-08-15",
+      "extended_support":"2026-08-31",
       "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
     },{
       "name":"Debian 12.0 Bookworm",
       "organization":"Debian",
-      "release":"2022-06-10",
-      "mainstream_support":"2026-01-01",
+      "release":"2023-06-10",
+      "mainstream_support":"2026-06-01",
+      "extended_support":"2028-06-01",
       "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
     },{
       "name":"Red Hat Enterprise Linux 3",
@@ -342,6 +378,7 @@
       "release":"2010-11-10",
       "mainstream_support":"2016-05-10",
       "extended_support":"2020-11-30",
+      "private_support":"2024-06-30",
       "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
     },{
       "name":"Red Hat Enterprise Linux 7",
@@ -349,6 +386,7 @@
       "release":"2014-06-10",
       "mainstream_support":"2019-09-01",
       "extended_support":"2024-06-30",
+      "private_support":"2028-06-30",
       "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
     },{
       "name":"Red Hat Enterprise Linux 8",
@@ -356,6 +394,7 @@
       "release":"2019-05-07",
       "mainstream_support":"2024-05-01",
       "extended_support":"2029-05-01",
+      "private_support":"2031-05-31",
       "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
     },{
       "name":"Red Hat Enterprise Linux 9",
@@ -363,6 +402,15 @@
       "release":"2022-05-17",
       "mainstream_support":"2027-05-01",
       "extended_support":"2032-05-01",
+      "private_support":"2034-05-31",
+      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
+    },{
+      "name":"Red Hat Enterprise Linux 10",
+      "organization":"Red Hat",
+      "release":"2025-05-13",
+      "mainstream_support":"2030-05-01",
+      "extended_support":"2035-05-01",
+      "private_support":"2037-05-31",
       "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
     },{
       "name":"Ubuntu 12.04 LTS Precise Pangolin",
@@ -379,7 +427,7 @@
       "private_support":"2022-04-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
-      "name":"Ubuntu 14.10 LTS Utopic Unicorn",
+      "name":"Ubuntu 14.10 Utopic Unicorn",
       "organization":"Canonical",
       "release":"2014-10-23",
       "mainstream_support":"2015-07-23",
@@ -491,6 +539,31 @@
       "mainstream_support":"2024-01-20",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
+      "name":"Ubuntu 23.10 Mantic Minotaur",
+      "organization":"Canonical",
+      "release":"2023-10-12",
+      "mainstream_support":"2024-07-11",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 24.04 LTS Noble Numbat",
+      "organization":"Canonical",
+      "release":"2024-04-25",
+      "mainstream_support":"2029-05-31",
+      "private_support":"2034-04-25",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 24.10 Oracular Oriole",
+      "organization":"Canonical",
+      "release":"2024-10-10",
+      "mainstream_support":"2025-07-01",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 25.04 Plucky Puffin",
+      "organization":"Canonical",
+      "release":"2025-04-17",
+      "mainstream_support":"2026-01-01",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
       "name":"Fedora 36",
       "release":"2022-05-10",
       "mainstream_support":"2023-05-16",
@@ -504,6 +577,26 @@
       "name":"Fedora 38",
       "release":"2023-04-18",
       "mainstream_support":"2024-05-14",
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+    },{
+      "name":"Fedora 39",
+      "release":"2023-11-07",
+      "mainstream_support":"2024-11-26",
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+    },{
+      "name":"Fedora 40",
+      "release":"2024-04-23",
+      "mainstream_support":"2025-05-13",
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+    },{
+      "name":"Fedora 41",
+      "release":"2024-10-29",
+      "mainstream_support":"2025-11-19",
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+    },{
+      "name":"Fedora 42",
+      "release":"2025-04-15",
+      "mainstream_support":"2026-05-13",
       "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
     }
   ]},{

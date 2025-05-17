@@ -6,14 +6,87 @@ comments: true
 
 One of the things I find my self wondering when starting a project is what platforms and systems to support. Should I support older systems when their own vendor support may be about to expire? This leads to the question, how log will support last for the various systems?
 
-So I have decided to try and put together the timelines (as wibbly wobbly timey winey as they are) for different systems. Hopefully I shall keep this up to date so that it cn be continually referenced.
+So I have decided to try and put together the timelines (as wibbly wobbly timey winey as they are) for different systems. I keep this up to date so that it can be continually referenced.
 
-There are many types of support offered by different organizations. For this I shall define 3 types that seem to cover the different types offered. One is full support, which should include added hardware, features and security support. Two is extended support, that includes security patches. Thirdly is paid support, typically only offered to those specifically paying for it and usually only includes security updates.
+There are many types of support offered by different organizations. For this I define 3 types that seem to cover the different types offered. One is full support (Green full shaded), which includes added hardware, features and security support. Two is extended support (Yellow half shaded), that includes security patches. Thirdly is paid support (Orange empty rectangle), typically only offered to those specifically paying for it and usually only includes security updates. Red is unsupported.
 
 <canvas id="canvasTimelines" width="100" height="100" 
   style="border: 1px solid #e8e8e8;"></canvas>
 
 <script>
+function GetMinSupportedData(data, now)
+{
+  let minSupportedDate = now;
+
+  for(let i = 0; i < data.length; i++)
+  {
+    if(data[i].type == "OS")
+    {
+      for(let j = 0; j < data[i].data.length; j++)
+      {
+        if(data[i].data[j].release)
+        {
+          const releaseDate = Date.parse(data[i].data[j].release);
+          if (releaseDate < minSupportedDate)
+          {
+            if(data[i].data[j].mainstream_support)
+            {
+              const date = Date.parse(data[i].data[j].mainstream_support);
+            
+              if(date >= now)
+              {
+                minSupportedDate = releaseDate;
+              }
+            }
+            
+            if(data[i].data[j].extended_support)
+            {
+              const date = Date.parse(data[i].data[j].extended_support);
+            
+              if(date >= now)
+              {
+                minSupportedDate = releaseDate;
+              }
+            }
+            
+            if(data[i].data[j].private_support)
+            {
+              const date = Date.parse(data[i].data[j].private_support);
+            
+              if(date >= now)
+              {
+                minSupportedDate = releaseDate;
+              }
+            }
+
+            if(data[i].data[j].enterprise_support)
+            {
+              const date = Date.parse(data[i].data[j].enterprise_support);
+            
+              if(date >= now)
+              {
+                minSupportedDate = releaseDate;
+              }
+            }
+
+            if(data[i].data[j].private_enterprise_support)
+            {
+              const date = Date.parse(data[i].data[j].private_enterprise_support);
+            
+              if(date >= now)
+              {
+                minSupportedDate = releaseDate;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  return minSupportedDate;
+}
+
 $(document).ready(function() {
   var barHeight = 50;
   var c=document.getElementById("canvasTimelines");
@@ -31,47 +104,46 @@ $(document).ready(function() {
   
   var jqxhr = $.getJSON( "/assets/support_timelines.json", function( data ) {
     
-    var rowHeight = 20 * window.devicePixelRatio;
-    var rowSpace = 20 * window.devicePixelRatio;
-    var height = 0;
-    var now = Date.now();
-    var minDate = now;
-    var maxDate = now;
+    const rowHeight = 20 * window.devicePixelRatio;
+    const rowSpace = 20 * window.devicePixelRatio;
+    let height = 0;
+    const now = Date.now();
+    let minDate = now;
+    let maxDate = now;
+    const minSupportedDate = GetMinSupportedData(data, now);
     
-    var fontSizeData = 14 * window.devicePixelRatio;
-    var fontSizeDate = 8 * window.devicePixelRatio
+    const fontSizeData = 14 * window.devicePixelRatio;
+    const fontSizeDate = 8 * window.devicePixelRatio
     
-    for(var i = 0; i < data.length; i++)
+    for(let i = 0; i < data.length; i++)
     {
-      /*
-      release":"2007-03-15",
-      "mainstream_support":"2013-01-08",
-      "extended_support":"2017-03-31",
-      "private_support":"2020-11-30",
-      */
-      
-      
       if(data[i].type == "OS")
       {
-        for(var j = 0; j < data[i].data.length; j++)
+        for(let j = 0; j < data[i].data.length; j++)
         {
-          height += rowHeight;
-          
-          var date;
-          
           if(data[i].data[j].release)
           {
-            date = Date.parse(data[i].data[j].release);
+            const date = Date.parse(data[i].data[j].release);
           
             if(date < minDate)
               minDate = date;
             if(date > maxDate)
               maxDate = date;
+
+            if(date < minSupportedDate)
+            {
+              continue;
+            }
+          }
+          else
+          {
+            console.error("Missing release date for " + data[i].data[j].name);
+            continue;
           }
           
           if(data[i].data[j].mainstream_support)
           {
-            date = Date.parse(data[i].data[j].mainstream_support);
+            const date = Date.parse(data[i].data[j].mainstream_support);
           
             if(date < minDate)
               minDate = date;
@@ -81,7 +153,7 @@ $(document).ready(function() {
           
           if(data[i].data[j].extended_support)
           {
-            date = Date.parse(data[i].data[j].extended_support);
+            const date = Date.parse(data[i].data[j].extended_support);
           
             if(date < minDate)
               minDate = date;
@@ -91,13 +163,14 @@ $(document).ready(function() {
           
           if(data[i].data[j].private_support)
           {
-            date = Date.parse(data[i].data[j].private_support);
+            const date = Date.parse(data[i].data[j].private_support);
           
             if(date < minDate)
               minDate = date;
             if(date > maxDate)
               maxDate = date;
           }
+          height += rowHeight;
         }
       }
       else if(data[i].type == "Browser")
@@ -105,28 +178,26 @@ $(document).ready(function() {
       
       }
     }
+
+    minDate = minSupportedDate
     
     //width = window.innerWidth *2 / 4;
     height = height + rowHeight*2;
 
-    console.log("width " + c.width + " " + dateWidth);
-
     //c.width = width/* * window.devicePixelRatio*/;
     c.height = height/* * window.devicePixelRatio*/;
 
-    var pixelHeight = height / window.devicePixelRatio;
+    const pixelHeight = height / window.devicePixelRatio;
   
-    //c.style.width  = c.width + 'px';
     c.style.width  = '100%';
     c.style.height = pixelHeight + 'px';
 
     c.width = c.offsetWidth * window.devicePixelRatio;
     c.height = height;
 
-    //var dateWidth = width / (maxDate - minDate);
-    var dateWidth = c.width/ (maxDate - minDate);
+    const dateWidth = c.width/ (maxDate - minDate);
     
-    var ctx = c.getContext("2d");
+    const ctx = c.getContext("2d");
     
     ctx.font="" + fontSizeDate + "px Verdana";
     ctx.lineWidth = 1;
@@ -143,7 +214,7 @@ $(document).ready(function() {
     startYear.setFullYear(minDateYear.getFullYear() - 1);
     startYear.setMonth(0);
     startYear.setDate(0);
-    for(var i = 0; i < numYears; i++)
+    for(let i = 0; i < numYears; i++)
     {
       var x = (startYear.getTime() - minDate)*dateWidth;
       
@@ -166,23 +237,25 @@ $(document).ready(function() {
     ctx.lineWidth = lineWidth;
     
     
-    for(var i = 0; i < data.length; i++)
+    for(let i = 0; i < data.length; i++)
     {
-    
       if(data[i].type == "OS")
       {
-        for(var j = 0; j < data[i].data.length; j++)
+        for(let j = 0; j < data[i].data.length; j++)
         {
-
-          var date;
           var left;
           var mid;
           
-          pos += rowHeight;
-          
           if(data[i].data[j].release)
           {
-            date = Date.parse(data[i].data[j].release);
+            const releaseDate = Date.parse(data[i].data[j].release);
+
+            if (releaseDate < minSupportedDate)
+            {
+              continue;
+            }
+
+            pos += rowHeight;
             
             var row = table.insertRow(tableRow);
             var cell1 = row.insertCell(0);
@@ -198,7 +271,7 @@ $(document).ready(function() {
             cell2.innerHTML = data[i].data[j].release;
             cell6.innerHTML = "<a href='" + data[i].data[j].ref + "'>" + data[i].data[j].ref + "</a>"
           
-            left = (date - minDate) * dateWidth;
+            left = (releaseDate - minDate) * dateWidth;
             
             var extendedColor = "rgba(255,0,0,0.33)";
             var privateColor = "rgba(255,0,0,0.0)";
@@ -231,7 +304,7 @@ $(document).ready(function() {
           
             if(data[i].data[j].mainstream_support)
             {
-              date = Date.parse(data[i].data[j].mainstream_support);
+              const date = Date.parse(data[i].data[j].mainstream_support);
               var w = (date - minDate) * dateWidth - left;
               
               ctx.fillRect(left+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
@@ -247,7 +320,7 @@ $(document).ready(function() {
             {
               ctx.fillStyle = extendedColor;
               
-              date = Date.parse(data[i].data[j].extended_support);
+              const date = Date.parse(data[i].data[j].extended_support);
               var w = (date - minDate) * dateWidth - mid;
               
               ctx.fillRect(mid+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
@@ -262,7 +335,7 @@ $(document).ready(function() {
             {
               ctx.fillStyle = privateColor;
               
-              date = Date.parse(data[i].data[j].private_support);
+              const date = Date.parse(data[i].data[j].private_support);
               var w = (date - minDate) * dateWidth - mid;
               
               ctx.fillRect(mid+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
@@ -276,8 +349,6 @@ $(document).ready(function() {
             
             ctx.fillStyle = "black";
             ctx.fillText(data[i].data[j].name, left + lineWidth, pos-lineWidth+rowHeight);
-          
-            
           }
         }
       }
