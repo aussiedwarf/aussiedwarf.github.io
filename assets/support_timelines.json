@@ -157,6 +157,13 @@
       "enterprise_support":"2027-10-12",
       "ref":"https://en.wikipedia.org/wiki/Windows_11_version_history"
     },{
+      "name":"Windows 11, 25H2",
+      "organization":"Microsoft",
+      "release":"2025-09-30",
+      "mainstream_support":"2027-10-12",
+      "enterprise_support":"2028-10-10",
+      "ref":"https://en.wikipedia.org/wiki/Windows_11_version_history"
+    },{
       "name":"Windows Server 2003",
       "organization":"Microsoft",
       "release":"2003-04-24",
@@ -285,7 +292,7 @@
       "name":"MacOS 13.0 Ventura",
       "organization":"Apple",
       "release":"2022-10-24",
-      "mainstream_support":"2025-09-01",
+      "mainstream_support":"2025-09-15",
       "ref":""
     },{
       "name":"MacOS 14.0 Sonoma",
@@ -300,6 +307,12 @@
       "mainstream_support":"2027-09-01",
       "ref":""
     },{
+      "name":"MacOS 26.0 Tahoe",
+      "organization":"Apple",
+      "release":"2025-09-15",
+      "mainstream_support":"2028-09-01",
+      "ref":""
+    },{
       "name":"Debian 6.0 Squeeze",
       "organization":"Debian",
       "release":"2011-02-06",
@@ -312,6 +325,7 @@
       "release":"2013-05-04",
       "mainstream_support":"2016-04-26",
       "extended_support":"2018-04-31",
+      "private_support":"2020-06-30",
       "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
     },{
       "name":"Debian 8.0 Jessie",
@@ -319,6 +333,7 @@
       "release":"2015-04-25",
       "mainstream_support":"2018-06-17",
       "extended_support":"2020-06-30",
+      "private_support":"2025-06-30",
       "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
     },{
       "name":"Debian 9.0 Stretch",
@@ -326,6 +341,7 @@
       "release":"2017-06-17",
       "mainstream_support":"2020-01-01",
       "extended_support":"2022-06-01",
+      "private_support":"2027-06-30",
       "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
     },{
       "name":"Debian 10.0 Buster",
@@ -333,6 +349,7 @@
       "release":"2019-07-09",
       "mainstream_support":"2022-01-01",
       "extended_support":"2024-01-01",
+      "private_support":"2029-06-30",
       "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
     },{
       "name":"Debian 11.0 Bullseye",
@@ -340,6 +357,7 @@
       "release":"2021-08-14",
       "mainstream_support":"2024-08-15",
       "extended_support":"2026-08-31",
+      "private_support":"2031-06-30",
       "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
     },{
       "name":"Debian 12.0 Bookworm",
@@ -347,6 +365,15 @@
       "release":"2023-06-10",
       "mainstream_support":"2026-06-01",
       "extended_support":"2028-06-01",
+      "private_support":"2033-06-30",
+      "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
+    },{
+      "name":"Debian 13.0 Trixie",
+      "organization":"Debian",
+      "release":"2025-08-09",
+      "mainstream_support":"2028-08-09",
+      "extended_support":"2030-06-30",
+      "private_support":"2035-06-30",
       "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
     },{
       "name":"Red Hat Enterprise Linux 3",
@@ -598,6 +625,24 @@
       "release":"2025-04-15",
       "mainstream_support":"2026-05-13",
       "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+    },{
+      "name":"openSUSE Leap 15.5",
+      "organization":"openSUSE Project",
+      "release":"2023-06-07",
+      "mainstream_support":"2024-12-31",
+      "ref":"https://en.wikipedia.org/wiki/OpenSUSE"
+    },{
+      "name":"openSUSE Leap 15.6",
+      "organization":"openSUSE Project",
+      "release":"2024-06-12",
+      "mainstream_support":"2026-04-30",
+      "ref":"https://en.wikipedia.org/wiki/OpenSUSE"
+    },{
+      "name":"openSUSE Leap 16.0",
+      "organization":"openSUSE Project",
+      "release":"2025-10-01",
+      "mainstream_support":"2027-10-31",
+      "ref":"https://en.wikipedia.org/wiki/OpenSUSE"
     }
   ]},{
   "type":"Browser",
