@@ -36,7 +36,7 @@
       "organization":"Microsoft",
       "release":"2013-10-17",
       "mainstream_support":"2018-01-09",
-      "enterprise_support":"2023-01-10",
+      "extended_support":"2023-01-10",
       "ref":"https://en.wikipedia.org/wiki/Windows_8.1"
     },{
       "name":"Windows 10, 1507",
@@ -590,6 +590,12 @@
       "release":"2025-04-17",
       "mainstream_support":"2026-01-01",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+    },{
+      "name":"Ubuntu 25.10 Questing Quokka",
+      "organization":"Canonical",
+      "release":"2025-10-09",
+      "mainstream_support":"2026-07-01",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history" 
     },{
       "name":"Fedora 36",
       "release":"2022-05-10",

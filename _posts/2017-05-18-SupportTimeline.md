@@ -87,6 +87,56 @@ function GetMinSupportedData(data, now)
   return minSupportedDate;
 }
 
+function CalculateNumRows(data, now, minSupportedDate)
+{
+  let rows = 0;
+
+  for(let i = 0; i < data.length; i++)
+  {
+    if(data[i].type == "OS")
+    {
+      for(let j = 0; j < data[i].data.length; j++)
+      {
+        if(data[i].data[j].release)
+        {
+          let lastDate = Date.parse(data[i].data[j].release);
+        
+          if(data[i].data[j].mainstream_support)
+          {
+            const date = Date.parse(data[i].data[j].mainstream_support);
+            if(date > lastDate)
+              lastDate = date;
+          }
+          
+          if(data[i].data[j].extended_support)
+          {
+            const date = Date.parse(data[i].data[j].extended_support);
+            if(date > lastDate)
+              lastDate = date;
+          }
+          
+          if(data[i].data[j].private_support)
+          {
+            const date = Date.parse(data[i].data[j].private_support);
+            if(date > lastDate)
+              lastDate = date;
+          }
+          if(lastDate >= minSupportedDate)
+          {
+            ++rows;
+          }
+        }
+        else
+        {
+          console.error("Missing release date for " + data[i].data[j].name);
+        }
+      }
+    }
+
+    return rows;
+  }
+}
+
 $(document).ready(function() {
   var barHeight = 50;
   var c=document.getElementById("canvasTimelines");
@@ -106,11 +156,11 @@ $(document).ready(function() {
     
     const rowHeight = 20 * window.devicePixelRatio;
     const rowSpace = 20 * window.devicePixelRatio;
-    let height = 0;
     const now = Date.now();
     let minDate = now;
     let maxDate = now;
     const minSupportedDate = GetMinSupportedData(data, now);
+    const numRows = CalculateNumRows(data, now, minSupportedDate);
     
     const fontSizeData = 14 * window.devicePixelRatio;
     const fontSizeDate = 8 * window.devicePixelRatio
@@ -137,7 +187,6 @@ $(document).ready(function() {
           }
           else
           {
-            console.error("Missing release date for " + data[i].data[j].name);
             continue;
           }
           
@@ -170,19 +219,14 @@ $(document).ready(function() {
             if(date > maxDate)
               maxDate = date;
           }
-          height += rowHeight;
         }
-      }
-      else if(data[i].type == "Browser")
-      {
-      
       }
     }
 
-    minDate = minSupportedDate
+    minDate = minSupportedDate;
     
     //width = window.innerWidth *2 / 4;
-    height = height + rowHeight*2;
+    const height = numRows * rowHeight + rowHeight*2;
 
     //c.width = width/* * window.devicePixelRatio*/;
     c.height = height/* * window.devicePixelRatio*/;
@@ -204,20 +248,19 @@ $(document).ready(function() {
     ctx.strokeStyle = "#b0b0b0";
     
     //create table
-    var table = document.getElementById("tableTimelines");
+    const table = document.getElementById("tableTimelines");
     
     //Draw dates
-    var maxDateYear = new Date(maxDate);
-    var minDateYear = new Date(minDate);
-    var numYears = maxDateYear.getFullYear() - minDateYear.getFullYear() + 2;
-    var startYear = new Date(minDate);
+    const maxDateYear = new Date(maxDate);
+    const minDateYear = new Date(minDate);
+    const numYears = maxDateYear.getFullYear() - minDateYear.getFullYear() + 2;
+    const startYear = new Date(minDate);
     startYear.setFullYear(minDateYear.getFullYear() - 1);
     startYear.setMonth(0);
     startYear.setDate(0);
     for(let i = 0; i < numYears; i++)
     {
-      var x = (startYear.getTime() - minDate)*dateWidth;
-      
+      const x = (startYear.getTime() - minDate)*dateWidth;
       
       ctx.beginPath();
       ctx.moveTo(x,0);
@@ -229,13 +272,12 @@ $(document).ready(function() {
       startYear.setFullYear(startYear.getFullYear() + 1);
     }
     
-    var pos = 0;
-    var lineWidth = 4;
-    var tableRow = 1;
+    let pos = 0;
+    let lineWidth = 4;
+    let tableRow = 1;
     
     ctx.font="" + fontSizeData + "px Verdana";
     ctx.lineWidth = lineWidth;
-    
     
     for(let i = 0; i < data.length; i++)
     {
@@ -243,38 +285,57 @@ $(document).ready(function() {
       {
         for(let j = 0; j < data[i].data.length; j++)
         {
-          var left;
-          var mid;
+          let left;
+          let mid;
           
           if(data[i].data[j].release)
           {
             const releaseDate = Date.parse(data[i].data[j].release);
+            let lastDate = releaseDate;
 
-            if (releaseDate < minSupportedDate)
+            const row = table.insertRow(tableRow);
+            const cell1 = row.insertCell(0);
+            const cell2 = row.insertCell(1);
+            const cell3 = row.insertCell(2);
+            const cell4 = row.insertCell(3);
+            const cell5 = row.insertCell(4);
+            const cell6 = row.insertCell(5);
+            
+            tableRow++;
+
+            cell1.innerHTML = data[i].data[j].name;
+            cell2.innerHTML = data[i].data[j].release;
+            cell6.innerHTML = "<a href='" + data[i].data[j].ref + "'>" + data[i].data[j].ref + "</a>";
+
+            if (data[i].data[j].mainstream_support)
+            {
+              cell3.innerHTML = data[i].data[j].mainstream_support;
+              lastDate = Date.parse(data[i].data[j].mainstream_support);
+            }
+
+            if (data[i].data[j].extended_support)
+            {
+              cell4.innerHTML = data[i].data[j].extended_support;
+              lastDate = Date.parse(data[i].data[j].extended_support);
+            }
+
+            if (data[i].data[j].private_support)
+            {
+              cell5.innerHTML = data[i].data[j].private_support;
+              lastDate = Date.parse(data[i].data[j].private_support);
+            }
+
+            if (lastDate < minSupportedDate)
             {
               continue;
             }
 
             pos += rowHeight;
-            
-            var row = table.insertRow(tableRow);
-            var cell1 = row.insertCell(0);
-            var cell2 = row.insertCell(1);
-            var cell3 = row.insertCell(2);
-            var cell4 = row.insertCell(3);
-            var cell5 = row.insertCell(4);
-            var cell6 = row.insertCell(5);
-            
-            tableRow++;
-            
-            cell1.innerHTML = data[i].data[j].name;
-            cell2.innerHTML = data[i].data[j].release;
-            cell6.innerHTML = "<a href='" + data[i].data[j].ref + "'>" + data[i].data[j].ref + "</a>"
-          
+
             left = (releaseDate - minDate) * dateWidth;
             
-            var extendedColor = "rgba(255,0,0,0.33)";
-            var privateColor = "rgba(255,0,0,0.0)";
+            let extendedColor = "rgba(255,0,0,0.33)";
+            let privateColor = "rgba(255,0,0,0.0)";
             if(now < Date.parse(data[i].data[j].mainstream_support))
             {
               ctx.strokeStyle = "green";
@@ -305,15 +366,12 @@ $(document).ready(function() {
             if(data[i].data[j].mainstream_support)
             {
               const date = Date.parse(data[i].data[j].mainstream_support);
-              var w = (date - minDate) * dateWidth - left;
+              const w = (date - minDate) * dateWidth - left;
               
               ctx.fillRect(left+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
               ctx.strokeRect(left+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
               
               mid = left + w;
-              
-              cell3.innerHTML = data[i].data[j].mainstream_support;
-
             }
           
             if(data[i].data[j].extended_support)
@@ -321,14 +379,12 @@ $(document).ready(function() {
               ctx.fillStyle = extendedColor;
               
               const date = Date.parse(data[i].data[j].extended_support);
-              var w = (date - minDate) * dateWidth - mid;
+              const w = (date - minDate) * dateWidth - mid;
               
               ctx.fillRect(mid+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
               ctx.strokeRect(mid+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
               
               mid = mid + w;
-              
-              cell4.innerHTML = data[i].data[j].extended_support;
             }
           
             if(data[i].data[j].private_support)
@@ -336,19 +392,16 @@ $(document).ready(function() {
               ctx.fillStyle = privateColor;
               
               const date = Date.parse(data[i].data[j].private_support);
-              var w = (date - minDate) * dateWidth - mid;
+              const w = (date - minDate) * dateWidth - mid;
               
               ctx.fillRect(mid+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
               ctx.strokeRect(mid+lineWidth/2,pos+lineWidth/2,w-lineWidth,rowHeight-lineWidth);
               
               mid = mid + w;
-              
-              cell5.innerHTML = data[i].data[j].private_support;
-          
             }
             
             ctx.fillStyle = "black";
-            ctx.fillText(data[i].data[j].name, left + lineWidth, pos-lineWidth+rowHeight);
+            ctx.fillText(data[i].data[j].name, Math.max(left + lineWidth, 0), pos-lineWidth+rowHeight);
           }
         }
       }
@@ -359,13 +412,43 @@ $(document).ready(function() {
     
     }
     
-    var x = (now - minDate)* dateWidth;
+    const x = (now - minDate)* dateWidth;
     
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.moveTo(x,0);
     ctx.lineTo(x,height);
     ctx.stroke();
+
+    ctx.lineWidth = lineWidth;
+
+    ctx.strokeStyle = "green";
+    ctx.fillStyle = "rgba(0,255,0,0.67)";
+    ctx.fillRect(c.width*0.75, lineWidth/2+rowHeight*2, c.width/4-lineWidth, rowHeight-lineWidth);
+    ctx.strokeRect(c.width*0.75, lineWidth/2+rowHeight*2, c.width/4-lineWidth, rowHeight-lineWidth);
+    ctx.fillStyle = "black";
+    ctx.fillText("Mainstream", c.width*0.75+4, -lineWidth+rowHeight*3);
+
+    ctx.strokeStyle = "rgb(191,191,0)";
+    ctx.fillStyle = "rgba(255,255,0,0.33)";
+    ctx.fillRect(c.width*0.75, lineWidth/2+rowHeight*3, c.width/4-lineWidth, rowHeight-lineWidth);
+    ctx.strokeRect(c.width*0.75, lineWidth/2+rowHeight*3, c.width/4-lineWidth, rowHeight-lineWidth);
+    ctx.fillStyle = "black";
+    ctx.fillText("Extended", c.width*0.75+4, -lineWidth+rowHeight*4);
+
+    ctx.strokeStyle = "orange";
+    ctx.fillStyle = "rgba(255,127,0,0.0)";
+    ctx.fillRect(c.width*0.75, lineWidth/2+rowHeight*4, c.width/4-lineWidth, rowHeight-lineWidth);
+    ctx.strokeRect(c.width*0.75, lineWidth/2+rowHeight*4, c.width/4-lineWidth, rowHeight-lineWidth);
+    ctx.fillStyle = "black";
+    ctx.fillText("Private", c.width*0.75+4, -lineWidth+rowHeight*5);
+
+    ctx.strokeStyle = "red";
+    ctx.fillStyle = "rgba(255,0,0,0.67)";
+    ctx.fillRect(c.width*0.75, lineWidth/2+rowHeight*5, c.width/4-lineWidth, rowHeight-lineWidth);
+    ctx.strokeRect(c.width*0.75, lineWidth/2+rowHeight*5, c.width/4-lineWidth, rowHeight-lineWidth);
+    ctx.fillStyle = "black";
+    ctx.fillText("Unsupported", c.width*0.75+4, -lineWidth+rowHeight*6);
     
   })
   
