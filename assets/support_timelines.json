@@ -229,10 +229,22 @@
       "extended_support":"2034-10-10",
       "ref":"https://en.wikipedia.org/wiki/Windows_Server_2022"
     },{
+      "name":"OS X 10.6 Snow Leopard",
+      "organization":"Apple",
+      "release":"2009-08-28",
+      "mainstream_support":"2014-02-25",
+      "ref":""
+    },{
+      "name":"OS X 10.7 Lion",
+      "organization":"Apple",
+      "release":"2011-07-20",
+      "mainstream_support":"2014-10-16",
+      "ref":""
+    },{
       "name":"OS X 10.8 Mountain Lion",
       "organization":"Apple",
       "release":"2012-07-25",
-      "mainstream_support":"2015-09-01",
+      "mainstream_support":"2015-11-19",
       "ref":""
     },{
       "name":"OS X 10.9 Mavericks",
@@ -244,37 +256,37 @@
       "name":"OS X 10.10 Yosemite",
       "organization":"Apple",
       "release":"2014-10-16",
-      "mainstream_support":"2017-09-01",
+      "mainstream_support":"2017-08-01",
       "ref":""
     },{
       "name":"OS X 10.11 El Capitan",
       "organization":"Apple",
       "release":"2015-07-09",
-      "mainstream_support":"2018-09-01",
+      "mainstream_support":"2018-10-01",
       "ref":""
     },{
       "name":"MacOS 10.12 Sierra",
       "organization":"Apple",
       "release":"2016-09-20",
-      "mainstream_support":"2019-10-01",
+      "mainstream_support":"2019-09-01",
       "ref":""
     },{
       "name":"MacOS 10.13 High Sierra",
       "organization":"Apple",
       "release":"2017-09-25",
-      "mainstream_support":"2020-09-01",
+      "mainstream_support":"2020-11-12",
       "ref":""
     },{
       "name":"MacOS 10.14 Mojave",
       "organization":"Apple",
       "release":"2018-09-24",
-      "mainstream_support":"2021-09-01",
+      "mainstream_support":"2021-10-01",
       "ref":""
     },{
       "name":"MacOS 10.15 Catalina",
       "organization":"Apple",
       "release":"2019-10-07",
-      "mainstream_support":"2022-10-01",
+      "mainstream_support":"2022-11-20",
       "ref":""
     },{
       "name":"MacOS 11.0 Big Sur",
