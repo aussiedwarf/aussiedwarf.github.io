@@ -325,6 +325,84 @@
       "mainstream_support":"2028-09-01",
       "ref":""
     },{
+      "name":"iOS 7",
+      "organization":"Apple",
+      "release":"2013-09-18",
+      "mainstream_support":"2014-06-30",
+      "ref":""
+    },{
+      "name":"iOS 8",
+      "organization":"Apple",
+      "release":"2014-09-17",
+      "mainstream_support":"2015-08-13",
+      "ref":""
+    },{
+      "name":"iOS 9",
+      "organization":"Apple",
+      "release":"2015-09-16",
+      "mainstream_support":"2019-07-22",
+      "ref":""
+    },{
+      "name":"iOS 10",
+      "organization":"Apple",
+      "release":"2016-09-13",
+      "mainstream_support":"2019-07-22",
+      "ref":""
+    },{
+      "name":"iOS 11",
+      "organization":"Apple",
+      "release":"2017-09-19",
+      "mainstream_support":"2018-07-09",
+      "ref":""
+    },{
+      "name":"iOS 12",
+      "organization":"Apple",
+      "release":"2018-09-17",
+      "mainstream_support":"2023-01-23",
+      "ref":""
+    },{
+      "name":"iOS 13",
+      "organization":"Apple",
+      "release":"2019-09-19",
+      "mainstream_support":"2020-09-01",
+      "ref":""
+    },{
+      "name":"iOS 14",
+      "organization":"Apple",
+      "release":"2020-09-16",
+      "mainstream_support":"2021-10-26",
+      "ref":""
+    },{
+      "name":"iOS 15",
+      "organization":"Apple",
+      "release":"2021-09-20",
+      "mainstream_support":"2026-09-01",
+      "ref":""
+    },{
+      "name":"iOS 16",
+      "organization":"Apple",
+      "release":"2022-09-12",
+      "mainstream_support":"2026-09-01",
+      "ref":""
+    },{
+      "name":"iOS 17",
+      "organization":"Apple",
+      "release":"2023-09-18",
+      "mainstream_support":"2024-11-19",
+      "ref":""
+    },{
+      "name":"iOS 18",
+      "organization":"Apple",
+      "release":"2024-09-16",
+      "mainstream_support":"2027-09-01",
+      "ref":""
+    },{
+      "name":"iOS 26",
+      "organization":"Apple",
+      "release":"2025-09-15",
+      "mainstream_support":"2028-09-01",
+      "ref":""
+    },{
       "name":"Debian 6.0 Squeeze",
       "organization":"Debian",
       "release":"2011-02-06",
@@ -487,8 +565,8 @@
       "name":"Ubuntu 16.04 LTS Xenian Xerus",
       "organization":"Canonical",
       "release":"2016-04-21",
-      "mainstream_support":"2021-04-01",
-      "private_support":"2024-04-01",
+      "mainstream_support":"2021-04-30",
+      "private_support":"2026-04-23",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
       "name":"Ubuntu 16.10 Yakkety Yak",
@@ -512,8 +590,8 @@
       "name":"Ubuntu 18.04 LTS Bionic Beaver",
       "organization":"Canonical",
       "release":"2018-04-26",
-      "mainstream_support":"2023-04-01",
-      "private_support":"2028-04-01",
+      "mainstream_support":"2023-05-31",
+      "private_support":"2028-04-26",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
       "name":"Ubuntu 18.10 Cosmic Cuttlefish",
@@ -537,8 +615,8 @@
       "name":"Ubuntu 20.04 LTS Focal Fossa",
       "organization":"Canonical",
       "release":"2020-04-23",
-      "mainstream_support":"2025-04-01",
-      "private_support":"2030-04-01",
+      "mainstream_support":"2025-05-29",
+      "private_support":"2030-04-23",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
       "name":"Ubuntu 20.10 Groovy Gorilla",
@@ -562,7 +640,7 @@
       "name":"Ubuntu 22.04 LTS Jammy Jellyfish",
       "organization":"Canonical",
       "release":"2022-04-21",
-      "mainstream_support":"2027-04-21",
+      "mainstream_support":"2027-06-01",
       "private_support":"2032-04-21",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
     },{
@@ -607,6 +685,13 @@
       "organization":"Canonical",
       "release":"2025-10-09",
       "mainstream_support":"2026-07-01",
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history" 
+    },{
+      "name":"Ubuntu 26.04 Resolute Raccoon",
+      "organization":"Canonical",
+      "release":"2026-04-23",
+      "mainstream_support":"2031-05-29",
+      "private_support":"2036-04-23",
       "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history" 
     },{
       "name":"Fedora 36",
