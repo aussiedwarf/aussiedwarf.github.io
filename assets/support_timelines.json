@@ -729,6 +729,16 @@
       "mainstream_support":"2026-05-13",
       "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
     },{
+      "name":"Fedora 43",
+      "release":"2025-10-28",
+      "mainstream_support":"2026-12-09",
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+    },{
+      "name":"Fedora 44",
+      "release":"2026-04-28",
+      "mainstream_support":"2027-06-02",
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+    },{
       "name":"openSUSE Leap 15.5",
       "organization":"openSUSE Project",
       "release":"2023-06-07",
