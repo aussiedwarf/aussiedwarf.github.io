@@ -242,10 +242,12 @@ $(document).ready(function() {
     const dateWidth = c.width/ (maxDate - minDate);
     
     const ctx = c.getContext("2d");
+    const textColor = "#ffffff";
     
     ctx.font="" + fontSizeDate + "px Verdana";
     ctx.lineWidth = 1;
     ctx.strokeStyle = "#b0b0b0";
+    ctx.fillStyle = textColor;
     
     //create table
     const table = document.getElementById("tableTimelines");
@@ -416,7 +418,7 @@ $(document).ready(function() {
               mid = mid + w;
             }
             
-            ctx.fillStyle = "black";
+            ctx.fillStyle = textColor;
             ctx.fillText(data[i].data[j].name, Math.max(left + lineWidth, 0), pos-lineWidth+rowHeight);
           }
         }
@@ -442,28 +444,28 @@ $(document).ready(function() {
     ctx.fillStyle = "rgba(0,255,0,0.67)";
     ctx.fillRect(c.width*0.75, lineWidth/2+rowHeight*2, c.width/4-lineWidth, rowHeight-lineWidth);
     ctx.strokeRect(c.width*0.75, lineWidth/2+rowHeight*2, c.width/4-lineWidth, rowHeight-lineWidth);
-    ctx.fillStyle = "black";
+    ctx.fillStyle = textColor;
     ctx.fillText("Mainstream", c.width*0.75+4, -lineWidth+rowHeight*3);
 
     ctx.strokeStyle = "rgb(191,191,0)";
     ctx.fillStyle = "rgba(255,255,0,0.33)";
     ctx.fillRect(c.width*0.75, lineWidth/2+rowHeight*3, c.width/4-lineWidth, rowHeight-lineWidth);
     ctx.strokeRect(c.width*0.75, lineWidth/2+rowHeight*3, c.width/4-lineWidth, rowHeight-lineWidth);
-    ctx.fillStyle = "black";
+    ctx.fillStyle = textColor;
     ctx.fillText("Extended", c.width*0.75+4, -lineWidth+rowHeight*4);
 
     ctx.strokeStyle = "orange";
     ctx.fillStyle = "rgba(255,127,0,0.0)";
     ctx.fillRect(c.width*0.75, lineWidth/2+rowHeight*4, c.width/4-lineWidth, rowHeight-lineWidth);
     ctx.strokeRect(c.width*0.75, lineWidth/2+rowHeight*4, c.width/4-lineWidth, rowHeight-lineWidth);
-    ctx.fillStyle = "black";
+    ctx.fillStyle = textColor;
     ctx.fillText("Private", c.width*0.75+4, -lineWidth+rowHeight*5);
 
     ctx.strokeStyle = "red";
     ctx.fillStyle = "rgba(255,0,0,0.67)";
     ctx.fillRect(c.width*0.75, lineWidth/2+rowHeight*5, c.width/4-lineWidth, rowHeight-lineWidth);
     ctx.strokeRect(c.width*0.75, lineWidth/2+rowHeight*5, c.width/4-lineWidth, rowHeight-lineWidth);
-    ctx.fillStyle = "black";
+    ctx.fillStyle = textColor;
     ctx.fillText("Unsupported", c.width*0.75+4, -lineWidth+rowHeight*6);
     
   })
