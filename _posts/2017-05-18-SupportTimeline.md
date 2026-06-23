@@ -300,12 +300,28 @@ $(document).ready(function() {
             const cell4 = row.insertCell(3);
             const cell5 = row.insertCell(4);
             const cell6 = row.insertCell(5);
+            const cell7 = row.insertCell(6);
+            const cell8 = row.insertCell(7);
             
             tableRow++;
 
             cell1.innerHTML = data[i].data[j].name;
             cell2.innerHTML = data[i].data[j].release;
-            cell6.innerHTML = "<a href='" + data[i].data[j].ref + "'>" + data[i].data[j].ref + "</a>";
+
+            if (data[i].data[j].kernel)
+            {
+              cell6.innerHTML = data[i].data[j].kernel;
+            }
+
+            if (data[i].data[j].glibc)
+            {
+              cell7.innerHTML = data[i].data[j].glibc;
+            }
+
+            if (data[i].data[j].glibcxx)
+            {
+              cell8.innerHTML = data[i].data[j].glibcxx;
+            }
 
             if (data[i].data[j].mainstream_support)
             {
@@ -463,6 +479,8 @@ $(document).ready(function() {
     <th>Full</th>
     <th>Extended</th>
     <th>Private</th>
-    <th>Reference</th>
+    <th>Kernel</th>
+    <th>glibc</th>
+    <th>glibcxx</th>
   </tr>
 </table>

@@ -408,7 +408,10 @@
       "release":"2011-02-06",
       "mainstream_support":"2014-07-19",
       "extended_support":"2016-02-29",
-      "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Debian_version_history",
+      "kernel":"2.6.32",
+      "glibc":"2.11",
+      "glibcxx":"3.4.13"
     },{
       "name":"Debian 7.0 Wheezy",
       "organization":"Debian",
@@ -416,7 +419,10 @@
       "mainstream_support":"2016-04-26",
       "extended_support":"2018-04-31",
       "private_support":"2020-06-30",
-      "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Debian_version_history",
+      "kernel":"3.2",
+      "glibc":"2.13",
+      "glibcxx":"3.4.17"
     },{
       "name":"Debian 8.0 Jessie",
       "organization":"Debian",
@@ -424,7 +430,10 @@
       "mainstream_support":"2018-06-17",
       "extended_support":"2020-06-30",
       "private_support":"2025-06-30",
-      "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Debian_version_history",
+      "kernel":"3.16",
+      "glibc":"2.19",
+      "glibcxx":"3.4.20"
     },{
       "name":"Debian 9.0 Stretch",
       "organization":"Debian",
@@ -432,7 +441,10 @@
       "mainstream_support":"2020-01-01",
       "extended_support":"2022-06-01",
       "private_support":"2027-06-30",
-      "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Debian_version_history",
+      "kernel":"4.9",
+      "glibc":"2.24",
+      "glibcxx":"3.4.22"
     },{
       "name":"Debian 10.0 Buster",
       "organization":"Debian",
@@ -440,7 +452,10 @@
       "mainstream_support":"2022-01-01",
       "extended_support":"2024-01-01",
       "private_support":"2029-06-30",
-      "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Debian_version_history",
+      "kernel":"4.19",
+      "glibc":"2.28",
+      "glibcxx":"3.4.25"
     },{
       "name":"Debian 11.0 Bullseye",
       "organization":"Debian",
@@ -448,7 +463,10 @@
       "mainstream_support":"2024-08-15",
       "extended_support":"2026-08-31",
       "private_support":"2031-06-30",
-      "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Debian_version_history",
+      "kernel":"5.10",
+      "glibc":"2.31",
+      "glibcxx":"3.4.28"
     },{
       "name":"Debian 12.0 Bookworm",
       "organization":"Debian",
@@ -456,7 +474,10 @@
       "mainstream_support":"2026-06-01",
       "extended_support":"2028-06-01",
       "private_support":"2033-06-30",
-      "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Debian_version_history",
+      "kernel":"6.1",
+      "glibc":"2.36",
+      "glibcxx":"3.4.30"
     },{
       "name":"Debian 13.0 Trixie",
       "organization":"Debian",
@@ -464,7 +485,10 @@
       "mainstream_support":"2028-08-09",
       "extended_support":"2030-06-30",
       "private_support":"2035-06-30",
-      "ref":"https://en.wikipedia.org/wiki/Debian_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Debian_version_history",
+      "kernel":"6.12",
+      "glibc":"2.41",
+      "glibcxx":"3.4.33"
     },{
       "name":"Red Hat Enterprise Linux 3",
       "organization":"Red Hat",
@@ -472,7 +496,9 @@
       "mainstream_support":"2006-07-20",
       "extended_support":"2010-10-31",
       "private_support":"2014-01-30",
-      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux",
+      "kernel":"2.4.21",
+      "glibc":"2.3.2"
     },{
       "name":"Red Hat Enterprise Linux 4",
       "organization":"Red Hat",
@@ -480,7 +506,10 @@
       "mainstream_support":"2009-03-31",
       "extended_support":"2012-02-29",
       "private_support":"2017-03-31",
-      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux",
+      "kernel":"2.6.9",
+      "glibc":"2.3.4",
+      "glibcxx":"3.4"
     },{
       "name":"Red Hat Enterprise Linux 5",
       "organization":"Red Hat",
@@ -488,7 +517,10 @@
       "mainstream_support":"2013-01-08",
       "extended_support":"2017-03-31",
       "private_support":"2020-11-30",
-      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux",
+      "kernel":"2.6.18",
+      "glibc":"2.5",
+      "glibcxx":"3.4.8"
     },{
       "name":"Red Hat Enterprise Linux 6",
       "organization":"Red Hat",
@@ -496,7 +528,10 @@
       "mainstream_support":"2016-05-10",
       "extended_support":"2020-11-30",
       "private_support":"2024-06-30",
-      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux",
+      "kernel":"2.6.32",
+      "glibc":"2.12",
+      "glibcxx":"3.4.13"
     },{
       "name":"Red Hat Enterprise Linux 7",
       "organization":"Red Hat",
@@ -504,7 +539,10 @@
       "mainstream_support":"2019-09-01",
       "extended_support":"2024-06-30",
       "private_support":"2028-06-30",
-      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux",
+      "kernel":"3.10",
+      "glibc":"2.17",
+      "glibcxx":"3.4.19"
     },{
       "name":"Red Hat Enterprise Linux 8",
       "organization":"Red Hat",
@@ -512,7 +550,10 @@
       "mainstream_support":"2024-05-01",
       "extended_support":"2029-05-01",
       "private_support":"2031-05-31",
-      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux",
+      "kernel":"4.18",
+      "glibc":"2.28",
+      "glibcxx":"3.4.25"
     },{
       "name":"Red Hat Enterprise Linux 9",
       "organization":"Red Hat",
@@ -520,7 +561,10 @@
       "mainstream_support":"2027-05-01",
       "extended_support":"2032-05-01",
       "private_support":"2034-05-31",
-      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux",
+      "kernel":"5.14",
+      "glibc":"2.34",
+      "glibcxx":"3.4.29"
     },{
       "name":"Red Hat Enterprise Linux 10",
       "organization":"Red Hat",
@@ -528,234 +572,351 @@
       "mainstream_support":"2030-05-01",
       "extended_support":"2035-05-01",
       "private_support":"2037-05-31",
-      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux",
+      "kernel":"6.12",
+      "glibc":"2.39",
+      "glibcxx":"3.4.33"
     },{
       "name":"Ubuntu 12.04 LTS Precise Pangolin",
       "organization":"Canonical",
       "release":"2012-04-26",
       "mainstream_support":"2017-04-28",
       "extended_support":"2019-04-01",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"3.2",
+      "glibc":"2.15",
+      "glibcxx":"3.4.16"
     },{
       "name":"Ubuntu 14.04 LTS Trusty Tahr",
       "organization":"Canonical",
       "release":"2014-04-27",
       "mainstream_support":"2019-04-01",
       "private_support":"2022-04-01",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"3.13",
+      "glibc":"2.19",
+      "glibcxx":"3.4.18"
     },{
       "name":"Ubuntu 14.10 Utopic Unicorn",
       "organization":"Canonical",
       "release":"2014-10-23",
       "mainstream_support":"2015-07-23",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"3.16",
+      "glibc":"2.19",
+      "glibcxx":"3.4.20"
     },{
       "name":"Ubuntu 15.04 Vivid Vervet",
       "organization":"Canonical",
       "release":"2015-04-23",
       "mainstream_support":"2016-02-04",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"3.19",
+      "glibc":"2.21",
+      "glibcxx":"3.4.20"
     },{
       "name":"Ubuntu 15.10 Wily Werewolf",
       "organization":"Canonical",
       "release":"2015-10-22",
       "mainstream_support":"2016-07-28",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"4.2",
+      "glibc":"2.21",
+      "glibcxx":"3.4.21"
     },{
       "name":"Ubuntu 16.04 LTS Xenian Xerus",
       "organization":"Canonical",
       "release":"2016-04-21",
       "mainstream_support":"2021-04-30",
       "private_support":"2026-04-23",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"4.4",
+      "glibc":"2.23",
+      "glibcxx":"3.4.21"
     },{
       "name":"Ubuntu 16.10 Yakkety Yak",
       "organization":"Canonical",
       "release":"2016-10-13",
       "mainstream_support":"2017-07-01",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"4.8",
+      "glibc":"2.24",
+      "glibcxx":"3.4.22"
     },{
       "name":"Ubuntu 17.04 Zesty Zapus",
       "organization":"Canonical",
       "release":"2017-04-13",
       "mainstream_support":"2018-01-01",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"4.10",
+      "glibc":"2.24",
+      "glibcxx":"3.4.22"
     },{
       "name":"Ubuntu 17.10 Artful Aardvark",
       "organization":"Canonical",
       "release":"2017-10-19",
       "mainstream_support":"2018-07-01",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"4.13",
+      "glibc":"2.26",
+      "glibcxx":"3.4.24"
     },{
       "name":"Ubuntu 18.04 LTS Bionic Beaver",
       "organization":"Canonical",
       "release":"2018-04-26",
       "mainstream_support":"2023-05-31",
       "private_support":"2028-04-26",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"4.15",
+      "glibc":"2.27",
+      "glibcxx":"3.4.25"
     },{
       "name":"Ubuntu 18.10 Cosmic Cuttlefish",
       "organization":"Canonical",
       "release":"2018-10-18",
       "mainstream_support":"2019-07-18",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"4.18",
+      "glibc":"2.28",
+      "glibcxx":"3.4.25"
     },{
       "name":"Ubuntu 19.04 Disco Dingo",
       "organization":"Canonical",
       "release":"2019-04-18",
       "mainstream_support":"2020-01-23",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"5.0",
+      "glibc":"2.29",
+      "glibcxx":"3.4.25"
     },{
       "name":"Ubuntu 19.10 Eoan Ermine",
       "organization":"Canonical",
       "release":"2019-10-17",
       "mainstream_support":"2020-07-01",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"5.3",
+      "glibc":"2.30",
+      "glibcxx":"3.4.28"
     },{
       "name":"Ubuntu 20.04 LTS Focal Fossa",
       "organization":"Canonical",
       "release":"2020-04-23",
       "mainstream_support":"2025-05-29",
       "private_support":"2030-04-23",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"5.4",
+      "glibc":"2.31",
+      "glibcxx":"3.4.28"
     },{
       "name":"Ubuntu 20.10 Groovy Gorilla",
       "organization":"Canonical",
       "release":"2020-10-22",
       "mainstream_support":"2021-07-01",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"5.8",
+      "glibc":"2.32",
+      "glibcxx":"3.4.28"
     },{
       "name":"Ubuntu 21.04 Hirsute Hippo",
       "organization":"Canonical",
       "release":"2021-04-22",
       "mainstream_support":"2022-01-20",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"5.11",
+      "glibc":"2.33",
+      "glibcxx":"3.4.28"
     },{
       "name":"Ubuntu 21.10 Impish Indri",
       "organization":"Canonical",
       "release":"2021-10-14",
       "mainstream_support":"2022-07-14",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"5.13",
+      "glibc":"2.34",
+      "glibcxx":"3.4.29"
     },{
       "name":"Ubuntu 22.04 LTS Jammy Jellyfish",
       "organization":"Canonical",
       "release":"2022-04-21",
       "mainstream_support":"2027-06-01",
       "private_support":"2032-04-21",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"5.15",
+      "glibc":"2.35",
+      "glibcxx":"3.4.30"
     },{
       "name":"Ubuntu 22.10 Kinetic Kudu",
       "organization":"Canonical",
       "release":"2022-10-20",
       "mainstream_support":"2023-07-01",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"5.19",
+      "glibc":"2.36",
+      "glibcxx":"3.4.30"
     },{
       "name":"Ubuntu 23.04 Lunar Lobster",
       "organization":"Canonical",
       "release":"2023-04-20",
       "mainstream_support":"2024-01-20",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"6.2",
+      "glibc":"2.37",
+      "glibcxx":"3.4.30"
     },{
       "name":"Ubuntu 23.10 Mantic Minotaur",
       "organization":"Canonical",
       "release":"2023-10-12",
       "mainstream_support":"2024-07-11",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"6.5",
+      "glibc":"2.38",
+      "glibcxx":"3.4.32"
     },{
       "name":"Ubuntu 24.04 LTS Noble Numbat",
       "organization":"Canonical",
       "release":"2024-04-25",
       "mainstream_support":"2029-05-31",
       "private_support":"2034-04-25",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"6.8",
+      "glibc":"2.39",
+      "glibcxx":"3.4.32"
     },{
       "name":"Ubuntu 24.10 Oracular Oriole",
       "organization":"Canonical",
       "release":"2024-10-10",
       "mainstream_support":"2025-07-01",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"6.11",
+      "glibc":"2.40",
+      "glibcxx":"3.4.33"
     },{
       "name":"Ubuntu 25.04 Plucky Puffin",
       "organization":"Canonical",
       "release":"2025-04-17",
       "mainstream_support":"2026-01-01",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history"
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"6.14",
+      "glibc":"2.41",
+      "glibcxx":"3.4.33"
     },{
       "name":"Ubuntu 25.10 Questing Quokka",
       "organization":"Canonical",
       "release":"2025-10-09",
       "mainstream_support":"2026-07-01",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history" 
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"6.17",
+      "glibc":"2.42",
+      "glibcxx":"3.4.34"
     },{
       "name":"Ubuntu 26.04 Resolute Raccoon",
       "organization":"Canonical",
       "release":"2026-04-23",
       "mainstream_support":"2031-05-29",
       "private_support":"2036-04-23",
-      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history" 
+      "ref":"https://en.wikipedia.org/wiki/Ubuntu_version_history",
+      "kernel":"7.0",
+      "glibc":"2.43",
+      "glibcxx":"3.4.34"
     },{
       "name":"Fedora 36",
       "release":"2022-05-10",
       "mainstream_support":"2023-05-16",
-      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux",
+      "kernel":"6.2",
+      "glibc":"2.35",
+      "glibcxx":"3.4.30"
     },{
       "name":"Fedora 37",
       "release":"2022-11-15",
       "mainstream_support":"2023-11-14",
-      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux",
+      "kernel":"6.5",
+      "glibc":"2.36",
+      "glibcxx":"3.4.30"
     },{
       "name":"Fedora 38",
       "release":"2023-04-18",
       "mainstream_support":"2024-05-14",
-      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux",
+      "kernel":"6.8",
+      "glibc":"2.37",
+      "glibcxx":"3.4.31"
     },{
       "name":"Fedora 39",
       "release":"2023-11-07",
       "mainstream_support":"2024-11-26",
-      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux",
+      "kernel":"6.11",
+      "glibc":"2.38",
+      "glibcxx":"3.4.32"
     },{
       "name":"Fedora 40",
       "release":"2024-04-23",
       "mainstream_support":"2025-05-13",
-      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux",
+      "kernel":"6.14",
+      "glibc":"2.39",
+      "glibcxx":"3.4.33"
     },{
       "name":"Fedora 41",
       "release":"2024-10-29",
       "mainstream_support":"2025-11-19",
-      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux",
+      "kernel":"6.17",
+      "glibc":"2.40",
+      "glibcxx":"3.4.33"
     },{
       "name":"Fedora 42",
       "release":"2025-04-15",
       "mainstream_support":"2026-05-13",
-      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux",
+      "kernel":"6.19",
+      "glibc":"2.41",
+      "glibcxx":"3.4.34"
     },{
       "name":"Fedora 43",
       "release":"2025-10-28",
       "mainstream_support":"2026-12-09",
-      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux",
+      "kernel":"7.0",
+      "glibc":"2.42",
+      "glibcxx":"3.4.34"
     },{
       "name":"Fedora 44",
       "release":"2026-04-28",
       "mainstream_support":"2027-06-02",
-      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux"
+      "ref":"https://en.wikipedia.org/wiki/Fedora_Linux",
+      "kernel":"7.0",
+      "glibc":"2.43",
+      "glibcxx":"3.4.34"
     },{
       "name":"openSUSE Leap 15.5",
       "organization":"openSUSE Project",
       "release":"2023-06-07",
       "mainstream_support":"2024-12-31",
-      "ref":"https://en.wikipedia.org/wiki/OpenSUSE"
+      "ref":"https://en.wikipedia.org/wiki/OpenSUSE",
+      "kernel":"5.14.21",
+      "glibc":"2.31",
+      "glibcxx":"3.4.32"
     },{
       "name":"openSUSE Leap 15.6",
       "organization":"openSUSE Project",
       "release":"2024-06-12",
       "mainstream_support":"2026-04-30",
-      "ref":"https://en.wikipedia.org/wiki/OpenSUSE"
+      "ref":"https://en.wikipedia.org/wiki/OpenSUSE",
+      "kernel":"6.4",
+      "glibc":"2.38",
+      "glibcxx":"3.4.32"
     },{
       "name":"openSUSE Leap 16.0",
       "organization":"openSUSE Project",
       "release":"2025-10-01",
       "mainstream_support":"2027-10-31",
-      "ref":"https://en.wikipedia.org/wiki/OpenSUSE"
+      "ref":"https://en.wikipedia.org/wiki/OpenSUSE",
+      "kernel":"6.12",
+      "glibc":"2.40",
+      "glibcxx":"3.4.33"
     }
   ]},{
   "type":"Browser",
